@@ -1,0 +1,220 @@
+/**** Reglages généraux **************/
+body {
+	font-family:"Helvetica";
+}
+
+a {
+	text-decoration:none;
+	color:black;
+}
+a:hover {
+	text-decoration:underline;
+}
+
+/***** Entête ***********************/
+header h1{
+	font-family:verdana;
+	text-transform:uppercase;
+	color:#0582A0;
+	display: inline-block;
+    margin-left: 20px;
+}
+header *{
+    vertical-align: middle;
+}
+
+/**************** Menu ***************/
+
+nav>ul  {
+	list-style-type:none; 
+	font-weight:bold;
+	font-size:18px;
+    display: inline-block;
+}
+
+nav>ul>li  {
+    display: inline-block;
+    vertical-align: top;
+    width: 200px;
+}
+nav>ul ul {
+	list-style-type:none;
+	font-weight:normal;
+	font-size:16px;
+    margin-left: 20px;
+}
+nav {
+    margin-bottom: 20px;
+}
+
+/** Modification pour le survol **/
+
+nav>ul>li{
+    position: relative;
+}
+
+nav>ul ul{
+    display: none;
+    position: absolute;
+    top: 20px;
+    left: -40px;
+    background-color: rgba(255,255,255,0.9);
+}
+
+nav>ul>li:hover ul{
+    display: inline-block;
+}
+
+
+/****** Corps de la page *******/
+#main h2{
+	font-family:verdana;
+	color:#0582A0;
+}
+
+#main p{
+	text-align:justify;
+	text-indent:20px;
+}
+
+
+#main ul{
+	list-style-type:square;
+}
+
+#main strong {
+	color:#0582A0;
+}
+
+#main{
+    margin: 10px 0;
+    padding-left: 30px;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+
+#main{
+    margin: 10px 0;
+    padding-left: 30px;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+
+
+/************Les 3 zones *****************/
+
+#zone1, #zone2, #zone3 {
+    position: relative;
+}
+
+#zone1 img {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+}
+
+
+#zone2 p {
+    position: absolute;
+    left: 20px;
+    bottom: 0px;
+    background-color: white;
+}
+
+#zone3 {
+    margin-top: 300px;
+}
+#zone3 img, #zone3 p {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+}
+
+#zone3 p {
+    z-index: -9;
+}
+
+/********** Galerie **********/
+
+#galerie {
+    background-color: black;
+    width: 1200px;
+    padding: 30px 0;
+}
+
+#lesImages {
+    width: 90%;
+    border: 3px solid red;
+    margin: auto auto;
+    padding: 20px 20px;
+}
+
+#lesImages>div {
+    display: inline-block;
+    margin-right: 10px;
+    position: relative;
+}
+#lesImages>div#last-child {
+    display: inline-block;
+    margin-right: 0px;
+}
+
+
+#lesImages img {
+    width: 200px;
+    margin: auto;
+}
+
+#lesImages p {
+    color: white;
+    margin-top: 2px;
+    font-size: 14px;
+    text-align: center;
+}
+
+
+#lesImages p {
+    position: absolute;
+    bottom: -10px;
+    background-color: rgba(255,255,255,0.5);
+    z-index: 99;
+    color: black;
+    display: none;
+    width: 100%;
+}
+#lesImages>div:hover>p {
+    display: block;
+}
+
+
+
+/***************************/
+
+
+body, h1, ul {
+    margin: 0;
+    padding: 0;
+}
+
+h1, ul {
+    display: inline-block;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+nav {
+    margin-top: 20px;
+}
+
+li{ 
+    margin-left: 20px;
+}
+

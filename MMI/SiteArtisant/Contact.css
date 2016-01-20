@@ -1,0 +1,47 @@
+body>img {
+    position: fixed;
+    top: -1300px;
+    right: -100px;
+    width: 4000px;
+    opacity: 0.3;
+    z-index: -9999;
+}
+
+img {
+    opacity: 1;
+}
+
+#main {
+    width: 1200px;
+}
+
+form {
+    background-color: rgba(255,255,255,0.2);
+    border-radius: 10px;
+    padding: 20px;
+    font-size: 18px;
+}
+
+legend {
+    font-size: 35px;
+    font-weight: bold;
+    font-family: 'Dancing Script', cursive;
+}
+
+label:first-child{
+    display: inline-block;
+    width: 65px;
+}
+
+fieldset div {
+    margin: 10px 0;
+    vertical-align: top;
+}
+
+input, select {
+    font-size: 18px;
+}
+
+[type="submit"] {
+    margin: 10px 0;
+}

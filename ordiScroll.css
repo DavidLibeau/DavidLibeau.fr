@@ -1,0 +1,89 @@
+@font-face {
+    font-family: 'Bebas Neue';
+    src: url(resrc/font/BebasNeue.otf);
+}
+
+#ordiScroll {
+    position: fixed;
+    bottom:  0;
+    right: 0;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    line-height: 100%;
+    background-color: #070707;
+}
+#scrollOrdiScroll {
+    position: absolute;
+    top: 0;
+    width: 1px;
+    height: 200vh;
+    z-index: -999;
+    display: none;
+}
+
+#ordiScroll>h1 {
+    position: absolute;
+    top: 20%;
+    width: 100%;
+    text-align: center;
+    font-family: 'Bebas Neue', sans-serif;
+    color:  white;
+    font-size: 7em;
+    font-weight: normal;
+    z-index: 99;
+}
+#ordiScroll>h1>strong {
+    color: #0070c0;
+    font-weight: normal;
+}
+#ordiScroll>h1>em {
+    font-style: normal;
+    font-size: 0.7em;
+    opacity: 0.8;
+}
+#ordiScroll>p {
+    height:100vh;
+    line-height:100vh;
+    width: 100%;
+    margin: 0;
+}
+#ordiScroll>p>img {
+    vertical-align: middle;
+    width: 100%;
+}
+#ordiScroll>div {
+    position: absolute;
+    bottom: 5%;
+    text-align: center;
+    width: 100%;
+}
+#ordiScroll>div>button {
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 10px;
+    border: 0;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    outline: none;
+}
+#ordiScroll>div>button:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+    opacity: 1!important;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+
+
+#inload {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+}

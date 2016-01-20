@@ -1,0 +1,71 @@
+body>img {
+    position: fixed;
+    top: -1300px;
+    left: 100px;
+    width: 4000px;
+    opacity: 0.3;
+    z-index: -9999;
+}
+
+
+#main {
+    width: 1200px;
+    height: auto;
+    margin: auto;
+    font-size: 18px;
+    text-align: justify;
+}
+
+section {
+    background-color: rgba(255,255,255,0.2);
+    border-radius: 10px;
+    padding: 20px;
+    font-size: 18px;
+}
+
+#main h1 {
+    text-shadow: 0 0 8px black;
+}
+
+
+
+/* ---- TABLE ---- */
+
+table{
+    min-width: 400px;
+    margin: 0 auto;
+    border-collapse:collapse;
+    font-size: 20px;
+    text-align: left;
+}
+
+caption {
+    caption-side: top;
+    text-align: center;
+    font-size: 45px;
+    font-family: 'Dancing Script', cursive;
+}
+
+tbody td, th{
+    padding: 0 10px;
+}
+
+
+th, td{
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+    border-bottom: 1px dashed black!important;
+}
+
+td:first-child {
+    font-weight: bold;
+}
+
+tr:last-child *, thead th {
+    border-bottom: 1px solid black!important;
+}
+
+thead *, tfoot * {
+    background-color: #eeeeee;
+    color: Black;
+}

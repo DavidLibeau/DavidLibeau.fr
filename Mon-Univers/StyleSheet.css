@@ -1,0 +1,222 @@
+.profil{
+    position: absolute;
+    //margin-top: 220px; 
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 0;
+    margin-right: 0;
+    width: auto;
+    height: auto;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    
+    opacity: 1;
+    
+    background-image:url(Profil.png);
+    background-repeat:no-repeat;
+    background-position:center center;
+    background-size: contain;
+
+}
+
+
+.G {
+    position: absolute;
+    width: 50%;
+    height: auto;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    text-align: right;
+    
+    background-image:url(Profil-G.png);
+    background-repeat:no-repeat;
+    background-position: 100% 0;
+    background-size: contain;
+    
+    opacity: 0;/* l'opacite que vous voulez au depart */
+    border: none;/* enlever les border d'une image en lien */
+    -ms-filter: "prodig:DXImageTransform.Microsoft.Alpha(Opacity=25)"; /* Hack IE8 */
+    filter: alpha(opacity = 25); /* Hack IE 5-7 */
+    -webkit-transition: opacity 0.5s ease-in-out;/* transition pour Chrome et Safari */
+    -moz-transition: opacity 0.5s ease-in-out;/* transition pour Firefox */
+    -o-transition: opacity 0.5s ease-in-out;/* transition pour Opéra */
+    transition: opacity 0.5s ease-in-out; /* on écrit cette ligne à la fin de façon à ce que ce soit elle qui soit prise en compte lorsque l'attribut transition sera pris en compte par tous les navigateurs */
+ 
+}
+
+.G:hover {    
+    opacity: 1; /* opacite au survol */
+    -ms-filter:"prodig:DXImageTransform.Microsoft.Alpha(Opacity=90)"; /* Hack IE 8 */
+    filter: alpha(opacity = 90); /* Hack IE 5-7 */
+}
+
+
+#G {
+    position: absolute;
+    width: 35%;
+    height: auto;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    text-align: right;
+    
+}
+
+.G .Gright {
+    margin-right: 30%;
+}
+
+
+
+.D {
+    position: absolute;
+    width: auto;
+    height: auto;
+    top: 0px;
+    bottom: 0px;
+    left: 50%;
+    right: 0px;
+    
+    background-image:url(Profil-D.png);
+    background-repeat:no-repeat;
+    background-position: -3px 0;
+    background-size: contain;
+    
+    opacity: 0;/* l'opacite que vous voulez au depart */
+    border: none;/* enlever les border d'une image en lien */
+    -ms-filter: "prodig:DXImageTransform.Microsoft.Alpha(Opacity=25)"; /* Hack IE8 */
+    filter: alpha(opacity = 25); /* Hack IE 5-7 */
+    -webkit-transition: opacity 0.5s ease-in-out;/* transition pour Chrome et Safari */
+    -moz-transition: opacity 0.5s ease-in-out;/* transition pour Firefox */
+    -o-transition: opacity 0.5s ease-in-out;/* transition pour Opéra */
+    transition: opacity 0.5s ease-in-out; /* on écrit cette ligne à la fin de façon à ce que ce soit elle qui soit prise en compte lorsque l'attribut transition sera pris en compte par tous les navigateurs */
+ 
+}
+
+.D:hover {
+    opacity: 1; /* opacite au survol */
+    -ms-filter:"prodig:DXImageTransform.Microsoft.Alpha(Opacity=90)"; /* Hack IE 8 */
+    filter: alpha(opacity = 90); /* Hack IE 5-7 */
+}
+
+.D .Dleft {
+    margin-left: 30%;
+}
+
+#D {
+    position: absolute;
+    width: auto;
+    height: auto;
+    top: 0px;
+    bottom: 0px;
+    left: 65%;
+    right: 0px;
+}
+
+
+
+.comp {
+    display: inline;
+    font-size: 25px;
+}
+
+.slider {
+    display: inline-block;
+    height: 40px;
+    width: 200px;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    border-radius: 1px;
+    -moz-box-shadow: 0px 0px 4px #000000;
+    -webkit-box-shadow: 0px 0px 4px #000000;
+    box-shadow: 0px 0px 4px #000000;
+    background: #2d2d2d; /* Old browsers */
+    background: -moz-linear-gradient(left,  #2d2d2d 0%, #514949 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#2d2d2d), color-stop(100%,#514949)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left,  #2d2d2d 0%,#514949 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left,  #2d2d2d 0%,#514949 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left,  #2d2d2d 0%,#514949 100%); /* IE10+ */
+    background: linear-gradient(to right,  #2d2d2d 0%,#514949 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2d2d2d', endColorstr='#514949',GradientType=1 ); /* IE6-9 */
+}
+.Gright .slider p {
+    position: relative;
+    top: -40px;
+    display: inline;
+    float: right;
+    font-style: italic;
+    color: #787878;
+    margin-right: 5px;
+}
+.Dleft .slider p {
+    position: relative;
+    display: inline;
+    float: left;
+    font-style: italic;
+    color: #787878;
+    margin-left: 5px;
+}
+
+.level {
+    height: 100%;
+    background-color: #5E5E5E;
+}
+
+.dix {
+    width: 100%;
+}
+.neuf {
+    width: 90%;
+}
+.huit {
+    width: 80%;
+}
+.sept {
+    width: 70%;
+}
+.six {
+    width: 60%;
+}
+.cinq {
+    width: 50%;
+}
+.quatre {
+    width: 40%;
+}
+.trois {
+    width: 30%;
+}
+.deux {
+    width: 20%;
+}
+.un {
+    width: 10%;
+}
+
+.bg {
+    position: absolute;
+    margin: 0 0;
+    padding: 0 0;
+    width: auto;
+    height: auto;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    opacity: 1;
+    z-index: -9999;
+    background-color: rgba(0,0,0,0);
+            
+background: -moz-linear-gradient(left,  rgba(0,0,0,0.01) 0%, rgba(0,0,0,0.01) 9%, rgba(0,0,0,0.65) 50%, rgba(0,0,0,0) 91%, rgba(0,0,0,0) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(0,0,0,0.01)), color-stop(9%,rgba(0,0,0,0.01)), color-stop(50%,rgba(0,0,0,0.65)), color-stop(91%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(left,  rgba(0,0,0,0.01) 0%,rgba(0,0,0,0.01) 9%,rgba(0,0,0,0.65) 50%,rgba(0,0,0,0) 91%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(left,  rgba(0,0,0,0.01) 0%,rgba(0,0,0,0.01) 9%,rgba(0,0,0,0.65) 50%,rgba(0,0,0,0) 91%,rgba(0,0,0,0) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(left,  rgba(0,0,0,0.01) 0%,rgba(0,0,0,0.01) 9%,rgba(0,0,0,0.65) 50%,rgba(0,0,0,0) 91%,rgba(0,0,0,0) 100%); /* IE10+ */
+background: linear-gradient(to right,  rgba(0,0,0,0.01) 0%,rgba(0,0,0,0.01) 9%,rgba(0,0,0,0.65) 50%,rgba(0,0,0,0) 91%,rgba(0,0,0,0) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#03000000', endColorstr='#00000000',GradientType=1 ); /* IE6-9 */
+}
