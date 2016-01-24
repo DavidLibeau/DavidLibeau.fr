@@ -15,7 +15,7 @@
 	</head>
 
 
-<body>
+<body> <!-- Test -->
 
 <div id="loadanimation">
 <h3>Chargement en cours...</h3>
