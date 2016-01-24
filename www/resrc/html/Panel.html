@@ -1,7 +1,5 @@
 <style>
-        
 /*              PANELS               */
-
 
 
     #header {
@@ -10,7 +8,8 @@
         overflow-y: hidden;
         width: 100%;
         height: 85vh;
-        top: 10vh;
+        top: 0;
+        padding-top: 10vh;
     }
 
     #panelsheader {
@@ -19,305 +18,246 @@
         padding: 0 10%;
         text-align: initial;
         display: block;
+    }
+
+    .row {
+        width: auto;
+        margin-right: 2vh;
+        top: 200px;
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    .rowtitle {
+        margin-left: 5px;
+        top: -100px;
+        font-size: 25px;
+        color: white;
+        z-index: 100;
+        text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.4);
+    }
+    
+    .panel {
+        position: relative;
+        width: 14vh;
+        height: 14vh;
+        display: inline-block;
+        margin: 0.25vh;
+        padding: 1vh;
+        text-decoration: none;
+        color: black;
+        overflow: hidden;
+        box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.4);
+        -webkit-border-radius: 1px;
+        -moz-border-radius: 1px;
+        border-radius: 1px;
+        background-color: #bababa; /*BABABABABABABABABA !*/
+        -webkit-transition: all 0.4s ease-in-out;
+        -moz-transition: all 0.4s ease-in-out;
+        -o-transition: all 0.4s ease-in-out;
+        transition: all 0.4s ease-in-out;
+        box-shadow: <?php
+        for ($i=1; $i<5; $i++) { 
+            echo "#8A8A8A -". $i . "px " . $i . "px, \n";
+        }
+        ?> #8A8A8A -5px 5px;
+        top: -5px;
+        right: -5px;
     }
-
-.row {
-    width: auto;
-    margin-right: 2vh;
-    top: 200px;
-    display: inline-block;
-    vertical-align: top;
-}
-
-.rowtitle {
-    margin-left: 5px;
-    top: -100px;
-    font-size: 25px;
-    color: white;
-    z-index: 100;
-    text-shadow:  0px 0px 4px rgba(0, 0, 0, 0.4);
-}
-
-.panel {
-    position: relative;
-    width: 14vh;
-    height: 14vh;
-    display: inline-block;
-    margin: 0.25vh;
-    padding: 1vh;
-    text-decoration:none;
-    color: black;
-    overflow: hidden;
     
-    box-shadow:  0px 0px 8px rgba(0, 0, 0, 0.4);
-    
-    -webkit-border-radius: 1px;
-    -moz-border-radius: 1px;
-    border-radius: 1px;
-
-    background-color: #bababa; /*BABABABABABABABABA !*/
-    
-    /*background: -moz-linear-gradient(-45deg,  #d1d1d1 0%, #666666 100%);
-    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#d1d1d1), color-stop(100%,#666666));
-    background: -webkit-linear-gradient(-45deg,  #d1d1d1 0%,#666666 100%);
-    background: -o-linear-gradient(-45deg,  #d1d1d1 0%,#666666 100%);
-    background: -ms-linear-gradient(-45deg,  #d1d1d1 0%,#666666 100%);
-    background: linear-gradient(135deg,  #d1d1d1 0%,#666666 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d1d1d1', endColorstr='#666666',GradientType=1 );*/
-    
-    -webkit-transition: all 0.4s ease-in-out;
-    -moz-transition: all 0.4s ease-in-out;
-    -o-transition: all 0.4s ease-in-out;
-    transition: all 0.4s ease-in-out;
-    
-    box-shadow: <?php 
-    for ($i=1; $i<5; $i++) { 
-        echo "#8A8A8A -". $i . "px " . $i . "px, \n"; 
+    .panel:hover {
+        box-shadow: <?php 
+        for ($i=1; $i<5; $i++) { 
+            echo "#5C5C5C -". $i . "px " . $i . "px, \n"; 
+        }
+        ?> #5C5C5C -5px 5px;
+    }
+
+    .panel * {
+        -webkit-transition: all 0.4s ease-in-out;
+        -moz-transition: all 0.4s ease-in-out;
+        -o-transition: all 0.4s ease-in-out;
+        transition: all 0.4s ease-in-out;
+    }
+
+    .double {
+        width: 31vh;
+    }
+
+    .panel.image {
+        filter: grayscale(90%);
+        -webkit-filter: grayscale(90%);
+        -moz-filter: grayscale(90%);
+        -ms-filter: grayscale(90%);
+        -o-filter: grayscale(90%);
+    }
+
+    .panel.image:hover {
+        filter: grayscale(0%);
+        -webkit-filter: grayscale(0%);
+        -moz-filter: grayscale(0%);
+        -ms-filter: grayscale(0%);
+        -o-filter: grayscale(0%);
+    }
+
+    .panel p {
+        position: absolute;
+        font-size: 2vh;
+        bottom: -12px;
+    }
+
+    .panel p::before {
+        content: ">";
+    }
+
+    .panel:hover p {
+        color: white;
+    }
+
+    .panel i {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        vertical-align: central;
+        margin: -1.3vh;
+        margin-top: 1.8vh;
+        font-size: 9vh;
     }
-    ?> #8A8A8A -5px 5px;
-    top: -5px;
-    right: -5px;
-}
-    
-.panel:hover {
-    box-shadow: <?php 
-    for ($i=1; $i<5; $i++) { 
-        echo "#5C5C5C -". $i . "px " . $i . "px, \n"; 
+    .panel i.flatsh{
+        opacity:0;
+        overflow: hidden;
+        text-shadow: <?php 
+        for ($i=1; $i<150; $i++) { 
+            echo "rgba(0,0,0,1) -". $i . "px " . $i . "px, \n"; 
+        }
+        ?> rgba(0,0,0,1) -150px 150px;
+        opacity:0.05;
+    }
+
+    .panel:hover .flatsh {
+        opacity: 0.3;
+    }
+
+
+    .Mon-Univers {
+        background: #050505;
+        background: url(//davidlibeau.fr/resrc/img/MonUniversPanel.jpg);
+        background-size: 110%;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .Retrouver {
+        background: url(//davidlibeau.fr/resrc/img/RetrouverPanel.jpg);
+        background-size: 110%;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .CWeb {
+        background: url(//davidlibeau.fr/resrc/img/CWebPanel.jpg);
+        background-size: 110%;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .CWeb i {
+        color: #48c253!important;
+    }
+
+    .RVideo {
+        background: url(//davidlibeau.fr/resrc/img/RVideoPanel.jpg);
+        background-size: 110%;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .Rvideo i {
+        color: #c02121!important;
+    }
+
+    .center {
+        text-align: center;
+    }
+
+    .blanc:hover {
+        background: #f6f8f9;
+    }
+
+    .blanc:hover > p {
+        color: black;
+    }
+
+    .vert:hover {
+        background: #bfd255;
+    }
+
+    .jaune:hover {
+        background: #EDCC11;
+    }
+
+    .rouge:hover {
+        background: #ff6b35;
+    }
+
+    .noir:hover {
+        background: #696969;
+    }
+
+    .bleu:hover {
+        background: #6db3f2;
+    }
+
+    .marine:hover {
+        background: #4F78B3;
+    }
+
+    .turquoise:hover {
+        background: #00B3CF;
+    }
+
+    .rose:hover {
+        background: #DB8CDB;
+    }
+
+    .gris:hover {
+        background: #d1d1d1;
+    }
+
+    .facebook:hover {
+        background: #3b5ba0;
+    }
+
+    .twitter:hover {
+        background: #42a6ed;
+    }
+
+    .youtube:hover {
+        background: #cc181e;
+    }
+
+    .skype:hover {
+        background: #12a5f4;
     }
-    ?> #5C5C5C -5px 5px;
-}
-
-.panel * {
-    -webkit-transition: all 0.4s ease-in-out;
-    -moz-transition: all 0.4s ease-in-out;
-    -o-transition: all 0.4s ease-in-out;
-    transition: all 0.4s ease-in-out;
-}
-
-.double {
-    width: 31vh;
-}
-
-.panel.image{
-    filter: grayscale(90%);
-    -webkit-filter: grayscale(90%);
-    -moz-filter: grayscale(90%);
-    -ms-filter: grayscale(90%);
-    -o-filter: grayscale(90%);
-}
-.panel.image:hover{
-    filter: grayscale(0%);
-    -webkit-filter: grayscale(0%);
-    -moz-filter: grayscale(0%);
-    -ms-filter: grayscale(0%);
-    -o-filter: grayscale(0%);
-}
-
-
-.panel p {
-    position: absolute;
-    font-size: 2vh;
-    bottom: -12px;
-}
-.panel p::before {
-    content: ">"
-}
-
-.panel:hover p {
-    color: white;
-}
-
-.panel i {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    vertical-align: central;
-    margin: -1.3vh;
-    margin-top: 1.8vh;
-    font-size: 9vh;
-}
-.panel i.flatsh{
-    opacity:0;
-    overflow: hidden;
-    text-shadow: <?php 
-    for ($i=1; $i<150; $i++) { 
-        echo "rgba(0,0,0,1) -". $i . "px " . $i . "px, \n"; 
-    }
-    ?> rgba(0,0,0,1) -150px 150px;
-    opacity:0.05;
-}
-    
-    
-.panel:hover .flatsh {
-    opacity:0.3;
-}
-
-/*.panel:hover .flatsh {
-    text-shadow: <?php 
-    for ($i=1; $i<7; $i++) { 
-        echo "rgba(0,0,0,1) -". $i . "px " . $i . "px, \n"; 
-    }
-    ?> rgba(0,0,0,1) -7px 7px;
-    opacity:0.3;
-}*/
-
-.Mon-Univers {
-    background: #050505;
-    background: url(//davidlibeau.fr/resrc/img/MonUniversPanel.jpg);
-    background-size: 110%;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-.Retrouver {
-    background: url(//davidlibeau.fr/resrc/img/RetrouverPanel.jpg);
-    background-size: 110%;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-.CWeb {
-    background: url(//davidlibeau.fr/resrc/img/CWebPanel.jpg);
-    background-size: 110%;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-.CWeb i{
-    color: #48c253!important;
-}
-.RVideo {
-    background: url(//davidlibeau.fr/resrc/img/RVideoPanel.jpg);
-    background-size: 110%;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-.Rvideo i{
-    color: #c02121!important;
-}
-
-.center {
-    text-align: center;
-}
-
-
-.blanc:hover {
-    background: #f6f8f9;
-}
-.blanc:hover>p {
-    color: black;
-}
-
-.vert:hover {
-    background: #bfd255; 
-}
-
-.jaune:hover {
-    background: #EDCC11; 
-}
-
-.rouge:hover {
-    background: #ff6b35; 
-}
-
-.noir:hover {
-    background: #696969;
-}
-
-.bleu:hover {
-    background: #6db3f2; 
-}
-
-.marine:hover {
-    background: #4F78B3;
-}
-
-.turquoise:hover {
-    background: #00B3CF;
-}
-
-.rose:hover {
-    background: #DB8CDB; 
-}
-
-.gris:hover {
-    background: #d1d1d1; 
-}
-
-.facebook:hover {
-    background: #3b5ba0; 
-}
-
-.twitter:hover {
-    background: #42a6ed; 
-}
-
-.youtube:hover {
-    background: #cc181e; 
-}
-
-.skype:hover {
-    background: #12a5f4; 
-}
 </style>
-
-<div id="header">
-
-<!--div class="btnScroll" onmouseover="myDiv.scroll('r',2)" onmouseout="myDiv.scroll('s')"><i class="fa fa-chevron-circle-right fa-2x"></i></div>
-<div class="btnScroll" onmouseover="myDiv.scroll('l',2)" onmouseout="myDiv.scroll('s')"><i class="fa fa-chevron-circle-left fa-2x"></i></div>
-<script>
-  var myDiv=new ScrollDiv("panelsheader");
-</script-->
+
+<div id="header">
 
 <div id="panelsheader">
-     <div class="row">
-     <p class="rowtitle">Me d&eacute;couvrir</p>
-     <a class="panel double image Mon-Univers" href="./Mon-Univers"><p>Mon Univers</p></a>
-     <a class="panel bleu" href="./CV"><i class="fa fa-list-alt fa-5x"></i><i class="fa fa-list-alt fa-5x flatsh"></i><p>CV</p></a>
-     <br/>
-     <a class="panel rouge" href="./Timeline"><i class="fa fa-long-arrow-right fa-5x"></i><i class="fa fa-long-arrow-right fa-5x flatsh"></i><p>Timeline</p></a>
-     <a class="panel rose" href="./TopGouts"><i class="fa fa-heart fa-5x"></i><i class="fa fa-heart fa-5x flatsh"></i><p>Top go&ucirc;ts</p></a>
-     <a class="panel marine" href="./DeuxMains"><i class="fa fa-hand-o-up fa-5x"></i><i class="fa fa-hand-o-up fa-5x flatsh"></i><p>Deux mains</p></a>
-     <br/>
-     <a class="panel double image Retrouver" href="./Outdoor"><p>On parle de moi</p></a>
+     <div class="row">         <p class="rowtitle">Me d&eacute;couvrir</p>         <a class="panel double image Mon-Univers" href="./Mon-Univers"><p>Mon Univers</p></a>         <a class="panel bleu" href="./CV"><i class="fa fa-list-alt fa-5x"></i><i class="fa fa-list-alt fa-5x flatsh"></i><p>CV</p></a>         <br/>         <a class="panel rouge" href="./Timeline"><i class="fa fa-long-arrow-right fa-5x"></i><i class="fa fa-long-arrow-right fa-5x flatsh"></i><p>Timeline</p></a>         <a class="panel rose" href="./TopGouts"><i class="fa fa-heart fa-5x"></i><i class="fa fa-heart fa-5x flatsh"></i><p>Top go&ucirc;ts</p></a>         <a class="panel marine" href="./DeuxMains"><i class="fa fa-hand-o-up fa-5x"></i><i class="fa fa-hand-o-up fa-5x flatsh"></i><p>Deux mains</p></a>         <br/>         <a class="panel double image Retrouver" href="./Outdoor"><p>On parle de moi</p></a>     </div>
+     <div class="row">         <p class="rowtitle">Mes créations</p>         <a class="panel turquoise" href="./Portfolio/Photos"><i class="fa  fa-camera-retro fa-5x"></i><i class="fa  fa-camera-retro fa-5x flatsh"></i><p>Photos</p></a>         <a class="panel rouge" href="./Portfolio/Videos"><i class="fa  fa-video-camera fa-5x"></i><i class="fa  fa-video-camera fa-5x flatsh"></i><p>Vid&eacute;os</p></a>         <br/>         <a class="panel vert" href="./Portfolio/Web"><i class="fa  fa-code fa-5x"></i><i class="fa  fa-code fa-5x flatsh"></i><p>Web</p></a>         <a class="panel jaune" href="./Portfolio/Font"><i class="fa  fa-font fa-5x"></i><i class="fa  fa-font fa-5x flatsh"></i><p>Polices</p></a>    </div>
+     <div class="row">         <p class="rowtitle">Mes solutions</p>         <a class="panel double image CWeb" href="./Creation-site-web"><i class="fa fa-desktop fa-5x"></i><i class="fa fa-desktop fa-5x flatsh"></i><p>Cr&eacute;ation de site web</p></a>         <br/>         <a class="panel double image RVideo" href="./Realisation-video"><i class="fa fa-film fa-5x"></i><i class="fa fa-film fa-5x flatsh"></i><p>R&eacute;alisation de vid&eacute;o</p></a>         <br/>         <a class="panel blanc" href="./Proposez"><i class="fa fa-angle-double-right fa-5x"></i><i class="fa fa-angle-double-right fa-5x flatsh"></i><p>Un projet ?</p></a>     </div>
+     <div class="row">         <p class="rowtitle">Me retrouver</p>         <a class="panel blanc" href="http://blog.DavidLibeau.fr"><i class="fa fa-pencil fa-5x"></i><i class="fa fa-pencil fa-5x flatsh"></i><p>Blog</p></a>         <a class="panel youtube"><i class="fa fa-youtube fa-5x"></i><i class="fa fa-youtube fa-5x flatsh"></i><p>YouTube</p></a>         <a class="panel twitter" href="http://twitter.com/DavidLibeau" target="_blank"><i class="fa fa-twitter fa-5x"></i><i class="fa fa-twitter fa-5x flatsh"></i><p>Twitter</p></a>         <br/>         <a class="panel skype" href="Skype:DavidLibeau"><i class="fa fa-skype fa-5x"></i><i class="fa fa-skype fa-5x flatsh"></i><p>Skype</p></a>         <a class="panel vert" href="https://plus.google.com/u/1/105229148442394502313" target="_blank"><i class="fa fa-google-plus fa-5x"></i><i class="fa fa-google-plus fa-5x flatsh"></i><p>Google+</p></a>         <a class="panel facebook" href="https://www.facebook.com/DavidLibeau4" target="_blank"><i class="fa fa-facebook fa-5x"></i><i class="fa fa-facebook fa-5x flatsh"></i><p>Facebook</p></a>
+         <br/>
+         <a class="panel marine" href="https://www.linkedin.com/in/davidlibeau" target="_blank"><i class="fa fa-linkedin fa-5x"></i><i class="fa fa-linkedin fa-5x flatsh"></i><p>LinkedIn</p></a>
+         <a class="panel jaune" href="#" onclick="window.open('http://www.google.com/recaptcha/mailhide/d?k\07501RAwN4RoRiX8Hd0LJeoaK8g\75\75\46c\0757uaGDbw63e_6yObfPE7SNGdhGM2mdvPiACwLxeV-QZc\075', '', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=500,height=300'); return false;"><i class="fa fa-envelope fa-5x"></i><i class="fa fa-envelope fa-5x flatsh"></i><p>E-Mail</p></a>
+         <a class="panel gris" href="./Contact"><i class="fa fa-ellipsis-h fa-5x"></i><i class="fa fa-ellipsis-h fa-5x flatsh"></i><p>Autre</p></a>
      </div>
-
-     <div class="row">
-     <p class="rowtitle">Mes créations</p>
-     <a class="panel turquoise" href="./Portfolio/Photos"><i class="fa  fa-camera-retro fa-5x"></i><i class="fa  fa-camera-retro fa-5x flatsh"></i><p>Photos</p></a>
-     <a class="panel rouge" href="./Portfolio/Videos"><i class="fa  fa-video-camera fa-5x"></i><i class="fa  fa-video-camera fa-5x flatsh"></i><p>Vid&eacute;os</p></a>
-     <br/>
-     <a class="panel vert" href="./Portfolio/Web"><i class="fa  fa-code fa-5x"></i><i class="fa  fa-code fa-5x flatsh"></i><p>Web</p></a>
-     <a class="panel jaune" href="./Portfolio/Font"><i class="fa  fa-font fa-5x"></i><i class="fa  fa-font fa-5x flatsh"></i><p>Polices</p></a>
+
+     <div class="row">
+         <p class="rowtitle" style="opacity: 0;">+</p>
+         <a class="panel orange" href="./About"><i class="fa fa-gears fa-5x"></i><i class="fa fa-gears fa-5x flatsh"></i><p>&Agrave; propos</p></a>
      </div>
-
-     <div class="row">
-     <p class="rowtitle">Mes solutions</p>
-     <a class="panel double image CWeb" href="./Creation-site-web"><i class="fa fa-desktop fa-5x"></i><i class="fa fa-desktop fa-5x flatsh"></i><p>Cr&eacute;ation de site web</p></a>
-     <br/>
-     <a class="panel double image RVideo" href="./Realisation-video"><i class="fa fa-film fa-5x"></i><i class="fa fa-film fa-5x flatsh"></i><p>R&eacute;alisation de vid&eacute;o</p></a>
-     <br/>
-     <a class="panel blanc" href="./Proposez"><i class="fa fa-angle-double-right fa-5x"></i><i class="fa fa-angle-double-right fa-5x flatsh"></i><p>Un projet ?</p></a>
-     </div>
-
-
-     <div class="row">
-     <p class="rowtitle">Me retrouver</p>
-     <a class="panel blanc" href="http://blog.DavidLibeau.fr"><i class="fa fa-pencil fa-5x"></i><i class="fa fa-pencil fa-5x flatsh"></i><p>Blog</p></a>
-     <a class="panel youtube"><i class="fa fa-youtube fa-5x"></i><i class="fa fa-youtube fa-5x flatsh"></i><p>YouTube</p></a>
-     <a class="panel twitter" href="http://twitter.com/DavidLibeau" target="_blank"><i class="fa fa-twitter fa-5x"></i><i class="fa fa-twitter fa-5x flatsh"></i><p>Twitter</p></a>
-     <br/>
-     <a class="panel skype" href="Skype:DavidLibeau"><i class="fa fa-skype fa-5x"></i><i class="fa fa-skype fa-5x flatsh"></i><p>Skype</p></a>
-     <a class="panel vert" href="https://plus.google.com/u/1/105229148442394502313" target="_blank"><i class="fa fa-google-plus fa-5x"></i><i class="fa fa-google-plus fa-5x flatsh"></i><p>Google+</p></a>
-     <a class="panel facebook" href="https://www.facebook.com/DavidLibeau4" target="_blank"><i class="fa fa-facebook fa-5x"></i><i class="fa fa-facebook fa-5x flatsh"></i><p>Facebook</p></a>
-     <br/>
-     <a class="panel marine" href="https://www.linkedin.com/in/davidlibeau" target="_blank"><i class="fa fa-linkedin fa-5x"></i><i class="fa fa-linkedin fa-5x flatsh"></i><p>LinkedIn</p></a>
-     <a class="panel jaune" href="#" onclick="window.open('http://www.google.com/recaptcha/mailhide/d?k\07501RAwN4RoRiX8Hd0LJeoaK8g\75\75\46c\0757uaGDbw63e_6yObfPE7SNGdhGM2mdvPiACwLxeV-QZc\075', '', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=500,height=300'); return false;"><i class="fa fa-envelope fa-5x"></i><i class="fa fa-envelope fa-5x flatsh"></i><p>E-Mail</p></a>
-     <a class="panel gris" href="./Contact"><i class="fa fa-ellipsis-h fa-5x"></i><i class="fa fa-ellipsis-h fa-5x flatsh"></i><p>Autre</p></a>
-     </div>
-
-     <div class="row">
-     <p class="rowtitle" style="opacity: 0;">+</p>
-     <a class="panel orange" href="./About"><i class="fa fa-gears fa-5x"></i><i class="fa fa-gears fa-5x flatsh"></i><p>&Agrave; propos</p></a>
-     </div>
-     
 </div>
 </div>

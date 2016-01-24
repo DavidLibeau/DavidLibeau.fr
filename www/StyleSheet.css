@@ -290,26 +290,31 @@ video {
     float: left;
     margin-left: 5px;
     cursor: pointer;
+}#topmenu * {
+    font-size: 20px!important;
 }#topmenu {
     position: absolute;
     display: none;
     top: 23px;
+    text-align: left;
+}#topmenu, #topmenu ul {
+    background-color: #FCFCFC;
+    border-radius: 5px;
     padding: 0;
     margin: 5px;
-    text-align: left;
-    background-color: #FCFCFC;
+    width: auto;
+    min-width: 200px;
+}#topmenu>li:hover, #topmenu .ui-state-focus, #topmenu .ui-state-active{
+    font-weight: normal!important;
+}#topmenu .ui-state-focus a {
     color: black;
-    border-radius: 5px;
-}#topmenu>li{
-    list-style: none;
-    border-radius: 5px;
-}#topmenu>li:hover{
-    background-color: #e4e4e4;
-}#topmenu>li>a {
-    display: block;
-    padding: 8px 18px;
-    color: black;
+}#topmenu a {
     text-decoration: none;
+    display: block;
+}#topmenu>li i {
+    text-align: center;
+    margin-right: 5px;
+    width: 20px;
 }body>a:first-child{
     display: none;
 }

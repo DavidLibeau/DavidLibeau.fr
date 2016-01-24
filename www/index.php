@@ -15,7 +15,7 @@
 	</head>
 
 
-<body> <!-- Test -->
+<body>
 
 <div id="loadanimation">
 <h3>Chargement en cours...</h3>
@@ -67,10 +67,27 @@
 <div id="top">
     <i id="topmenuicon" class="fa fa-bars"></i>
     <ul id="topmenu">
-        <li><a href="?theme=starwars">Theme Star Wars</a></li>
-        <li><a href="#">Rien d'autre</a></li>
-        <li><a href="#">(Pour l'instant)</a></li>
+        <li><i class="fa fa-rocket"></i>Themes
+            <ul>
+                <?php
+                if(isset($_GET["theme"]) && $_GET["theme"]=="starwars") {
+                ?>
+                    <li><a href="/"><i class="fa fa-square-o"></i>Par défaut</a></li>
+                    <li class="ui-state-disabled"><i class="fa fa-check-square-o"></i>Star Wars</li>
+                <?php
+                } else {
+                ?>
+                    <li class="ui-state-disabled"><i class="fa fa-check-square-o"></i>Par défaut</li>
+                    <li><a href="?theme=starwars"><i class="fa fa-square-o"></i>Star Wars</a></li>
+                <?php   } ?>
+                <li class="ui-state-disabled">...</li>
+            </ul>
+        </li>
+        <li><a href="About" target="_blank"><i class="fa fa-info"></i>Info</a></li>
+        <li><a href="//github.com/DavidLibeau/DavidLibeau.fr" target="_blank"><i class="fa fa-github"></i>Open sources</a></li>
+        <li><a href="Contact" target="_blank"><i class="fa fa-pencil"></i>Contact</a></li>
     </ul>
+
     <span id="toptime">00:00</span>
 </div>
 

@@ -1,4 +1,7 @@
-"use strict";
+"use strict";
+var topmenu = false;
+var VISIBLE = true;
+var NOTVISIBLE = false;
 //var timeouthoverpanel;
 window.addEventListener("load", init);
 //setTimeout(function () { document.body.style.opacity = "1" }, 50);
@@ -24,10 +27,21 @@ function init(evt) {
     time();
     setInterval(time, 5000);
 
+    $("#topmenu").menu();
+
     $("#topmenuicon").click(function (evt) {
         $("#topmenuicon").css("color", "white");
         $("#topmenu").show();
-    })
+        setTimeout(function(){ topmenu=VISIBLE; }, 10);
+    });
+
+   $(window).click(function () {
+        if(topmenu==VISIBLE){
+            $("#topmenuicon").css("color", "");
+            $("#topmenu").hide();
+            setTimeout(function(){ topmenu=NOTVISIBLE; }, 10);
+        }
+    });
 }
 
 
@@ -108,6 +122,7 @@ $(".panel").on("mousedown", function (evt) {
         width: $(window).width() / 1.5,
         closeOnEscape: true,
         closeText: "Fermer",
+        appendTo : "#inload", 
         iconButtons: [
         {
             text: "Agrandir",
@@ -126,11 +141,13 @@ $(".panel").on("mousedown", function (evt) {
                     });
                 } else {
                     $(this).parents(".ui-dialog").css({
+                        "position": "fixed",
                         "border-radius": "0",
                         "top": 0,
                         "left": 0,
                         "height": "95vh",
-                        "width": "100vw"
+                        "width": "100vw",
+                        "z-index": "999"
                     });
                     $(this).parents(".ui-dialog").children(".ui-dialog-content").css({
                         "min-height": "96vh"
@@ -153,7 +170,7 @@ $(".panel").on("mousedown", function (evt) {
             }
         }
     ]
-    });
+    }).draggable({ containment: "#inload", scroll: false });
 
 });
 
