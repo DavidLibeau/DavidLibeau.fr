@@ -47,7 +47,7 @@
 ?>
 <div id="scrollOrdiScroll"></div>
 <header id="ordiScroll">
-    <h1><strong>D</strong>avid<strong>L</strong>ibeau<em>.fr</em></h1>
+    <h1><strong>D</strong>avid<strong>L</strong>ibeau<em>.fr</em><a id="badgeBeta" href="//github.com/DavidLibeau/DavidLibeau.fr" target="_blank"><img src="resrc/img/badgeBeta.png" alt="Badge beta"/></a></h1>
     <p>
         <?php
             for($i=1;$i<=12;$i++){

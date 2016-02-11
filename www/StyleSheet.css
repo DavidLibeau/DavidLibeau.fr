@@ -205,6 +205,18 @@ body {
 @keyframes sk-circleFadeDelay {
   0%, 39%, 100% { opacity: 0; }
   40% { opacity: 1; } 
+}#badgeBeta {
+    position: relative;
+    display: inline-block;
+    width: 0px;
+    top: 11px;
+    right: 93px;
+    -ms-transform: rotate(7deg);
+    -webkit-transform: rotate(7deg);
+    transform: rotate(7deg);
+    opacity: 0.2;
+}#badgeBeta>img {
+    width: 150px;
 }
 
 .full-screen-background-image {

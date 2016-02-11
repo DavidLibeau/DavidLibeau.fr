@@ -41,7 +41,7 @@
 #ordiScroll>h1>em {
     font-style: normal;
     font-size: 0.7em;
-    opacity: 0.8;
+    color: #E8E8E8;
 }
 #ordiScroll>p {
     height:100vh;
