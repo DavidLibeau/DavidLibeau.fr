@@ -1,14 +1,6 @@
 
-        <?php require "../resrc/html/AllHead.html"; ?>
-        <link rel="stylesheet" href="StyleSheet.css" type="text/css" /> 
-        <title></title>
-    </head>
-    <body>
-
-    <div class="bg"></div> 
-        <!--div class="logo"></div-->
-        <?php require "../resrc/html/AllNav.html"; ?>
-         
+        <?php require "../resrc/html/AllHead.html"; ?>        <link rel="stylesheet" href="StyleSheet.css" type="text/css" />         <title></title>    </head>
+    <body>    <div class="bg"></div>         <!--div class="logo"></div-->        <?php require "../resrc/html/AllNav.html"; ?>        <p style="margin: 0; background-color: rgba(0,0,0,0.5); color: white;"><i class="fa fa-exclamation-triangle"></i> <strong>Archive</strong> - Cette page date de plus de deux ans. Elle n'est pas à jour. Merci de votre compréhension.</p>      
         <div class="profil">
 
         <div id="G">
@@ -56,7 +48,5 @@
         </div> 
     
     </div>
-
-
-    </body>
+    </body>
 </html>

@@ -11,6 +11,10 @@
 	if(isset($_GET["theme"]) && $_GET["theme"]=="starwars"){
 		?>
 	<link rel="stylesheet" href="starwars.css" type="text/css" />
+	<?php } 
+    if(isset($_GET["theme"]) && $_GET["theme"]=="holo"){
+		?>
+	<link rel="stylesheet" href="holo.css" type="text/css" />
 	<?php } ?>
 	</head>
 
@@ -39,7 +43,7 @@
 </div>
 
 <?php
-    if(isset($_GET["connexion"]) && $_GET["connexion"]=="lente" || isset($_GET["theme"]) && $_GET["theme"]=="starwars"){
+    if(isset($_GET["connexion"]) && $_GET["connexion"]=="lente" || isset($_GET["theme"]) && $_GET["theme"]=="starwars" || isset($_GET["theme"]) && $_GET["theme"]=="holo"){
 ?>
     <div id="infoConnexion" style="display: none">lente</div>
 <?php
