@@ -41,6 +41,7 @@ body {
 
 #inload {
     display: none;
+    background-attachment: fixed;    background-size: cover;
 }
 
 
