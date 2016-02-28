@@ -101,7 +101,9 @@
         <li><a href="//github.com/DavidLibeau/DavidLibeau.fr" target="_blank"><i class="fa fa-github"></i>Open sources</a></li>
         <li><a href="Contact" target="_blank"><i class="fa fa-pencil"></i>Contact</a></li>
     </ul>
-
+    <?php if(isset($_GET["theme"]) && $_GET["theme"]=="block"){ ?>
+    <h1>David Libeau</h1>
+    <?php } ?>
     <span id="toptime">00:00</span>
 </div>
 

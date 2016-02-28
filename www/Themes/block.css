@@ -10,9 +10,9 @@ body {
     height: 70vh!important;
 }
 
-/*.panel {
+.panel {
     background-color: #F0F0F0!important;
-}*/
+}
 
 footer {
     display: none;
@@ -24,35 +24,38 @@ footer {
 
 #top, #bottom {
     min-height: 10vh;
-    background-color: #F0F0F0;
     margin: 1vh 10vw;
     box-shadow: #bababa -1px 1px, #bababa -2px 2px, #bababa -3px 3px, #bababa -4px 4px, #bababa -5px 5px;
     z-index: 70;
 }
-
-#topmenuicon {
-    font-size: 7vh;
-    margin: 1.5vh 3vh;
-}
-
-#topmenu {
-    top: 11vh;
-}
-
 #top {
     width: 80vw!important;
+    background: none;
+    mix-blend-mode: lighten;
+    background-color: white;
 }
-
 #bottom {
     position: relative;
     width: 70vw;
     padding: 10vh;
     overflow: hidden;
+    background-color: #F0F0F0;
 }
-
 #bottom>* {
     position: relative;
     top: 0px;
+}
+
+#topmenuicon {
+    font-size: 7vh;
+    margin: 1.5vh 3vh;
+    color: black;
+}
+#topmenu {
+    top: 11vh;
+}
+#top>h1 {
+    color: black;    
 }
 
 
