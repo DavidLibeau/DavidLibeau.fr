@@ -12,7 +12,7 @@
     <meta name="description" content="DavidLibeau.fr - Etudiant passionné par le multimédia" />
 	<?php if(isset($_GET["theme"]) && $_GET["theme"]!=""){ ?>
 	<link rel="stylesheet" href="Themes/<?php echo($_GET["theme"]); ?>.css" type="text/css" />
-	<?php }?>
+	<?php } ?>
 	</head>
 
 
@@ -144,7 +144,15 @@
             </span>
         </a>
     </div>
-    
+
+    <!--iframe id="map" src="//dav.li/map"></iframe-->
+
+    <!--div id="map">
+    </div-->
+
+    <a href="/CV" target="_blank" id="CV"><img src="CV/DavidLibeau_CV.jpg" alt="CV" title="Plus d'info..."/></a>
+
+    <p><br/><br/><br/><br/>Rien de plus... à part que je recherche une alternance pour un Bac+3 en développement web dans l'Ouest (Bretagne/Pays de la Loire) ou sur Paris. <a href="/Contact" target="_blank">Contactez-moi si jamais</a> !</p>
 </div>
 <?php } ?>
 

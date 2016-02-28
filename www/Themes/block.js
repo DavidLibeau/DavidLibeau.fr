@@ -1,10 +1,11 @@
 $(document).ready(function () {
     setTimeout(function () {
-        $("#inload").css("height", $(document).height()+(10*($(window).height()/100)) + "px");
+        $("#inload").css("height", $(document).height()+"px");
         $(window).scroll(scrollBlock);
         scrollBlock();
         console.log($(document).height());
     }, 10);
+
 });
 
 function scrollBlock(evt) {
@@ -32,4 +33,32 @@ function scrollBlock(evt) {
             "bottom": "1vh"
         });
     }
+
 }
+
+
+
+
+/* MAP 
+
+var map = L.map('map', {
+    scrollWheelZoom: false,
+    center: [51.505, -0.09],
+    zoom: 13
+});
+
+L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+	maxZoom: 18,
+	attribution: '&copy;',
+	id: 'mapbox.streets'
+}).addTo(map);
+
+
+L.marker([51.5, -0.09]).bindPopup("<b>Hello world!</b><br>I am a popup.").addTo(map);
+
+function onMapClick(e) {
+    alert("You clicked the map at " + e.latlng);
+}
+
+map.on('click', onMapClick);
+*/
