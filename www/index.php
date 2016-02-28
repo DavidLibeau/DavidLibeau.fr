@@ -150,9 +150,9 @@
     <!--div id="map">
     </div-->
 
-    <a href="/CV" target="_blank" id="CV"><img src="CV/DavidLibeau_CV.jpg" alt="CV" title="Plus d'info..."/></a>
+    <a href="/CV" target="_blank" id="CV"><img src="CV/DavidLibeau_CV-mini.jpg" alt="CV" title="Curriculum Vitae"/></a>
 
-    <p><br/><br/><br/><br/>Rien de plus... à part que je recherche une alternance pour un Bac+3 en développement web dans l'Ouest (Bretagne/Pays de la Loire) ou sur Paris. <a href="/Contact" target="_blank">Contactez-moi si jamais</a> !</p>
+    <p><br/><br/><br/><br/>Rien de plus...<br/>&Agrave; part le fait que je recherche une alternance pour un Bac+3 en développement web dans l'Ouest (Bretagne/Pays de la Loire) ou sur Paris. <a href="/Contact" target="_blank">Contactez-moi si jamais</a> !</p>
 </div>
 <?php } ?>
 

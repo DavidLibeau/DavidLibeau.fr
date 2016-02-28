@@ -16,7 +16,7 @@ function init(evt) {
         $("#scrollOrdiScroll").show();
     }
     $("#inload").css("background-image", "url(./resrc/img/B3bis.jpg)");
-    $("body").css("overflow", "auto");
+    //$("body").css("overflow", "auto");
     //var bodyHeight = parseInt(window.getComputedStyle(document.body).getPropertyValue("height"), 10);
     //bodyHeight = bodyHeight - 200;
     //window.scrollTo(0, bodyHeight);

@@ -1,9 +1,10 @@
 $(document).ready(function () {
     setTimeout(function () {
-        $("#inload").css("height", $(document).height()+"px");
+        $("#inload").css("height", $(document).height() + "px");
         $(window).scroll(scrollBlock);
         scrollBlock();
         console.log($(document).height());
+        $("body").css("overflow", "auto");
     }, 10);
 
 });
@@ -11,13 +12,13 @@ $(document).ready(function () {
 function scrollBlock(evt) {
     var scroll = parseInt(($(window).scrollTop() / $(window).height()) * 100);
     console.log(scroll + "%");
-    if(scroll>=67){
+    if(scroll>=72){
         $("#bottom").css({
             "position": "fixed",
             "top": "13vh",
             "bottom": "-10vh"
         });
-        $("#bottom>*").css("top", -($(window).scrollTop()-($(window).height()*0.66))+"px");
+        $("#bottom>*").css("top", -($(window).scrollTop()-($(window).height()*0.72))+"px"); //-($(window).height()*0.66))-(15/$(window).height()*100)
     } else {
         $("#bottom").css({
             "position": "relative",
