@@ -115,63 +115,67 @@ $.widget("app.dialog", $.ui.dialog, {
 $(".panel").on("mousedown", function (evt) {
     evt.preventDefault();
 }).click(function (evt) {
-    evt.preventDefault();
-    $("<div title=\"" + $(this).children("p").html() + "\"><iframe src=\"" + $(this).attr("href") + "\" style=\"border:none; min-height:100%; min-width: 100%;\"></iframe></div>").dialog(
-    {
-        height: $(window).height() / 1.5,
-        width: $(window).width() / 1.5,
-        closeOnEscape: true,
-        closeText: "Fermer",
-        appendTo : "#inload", 
-        iconButtons: [
-        {
-            text: "Agrandir",
-            icon: "ui-icon-arrow-4-diag",
-            click: function (evt) {
-                if (parseInt($(this).parents(".ui-dialog").css("width")) == $(window).width()) {
-                    $(this).parents(".ui-dialog").css({
-                        "border-radius": "5px",
-                        "top": "16.5vh",
-                        "left": "16.5vw",
-                        "height": $(window).height() / 1.5,
-                        "width": $(window).width() / 1.5
-                    });
-                    $(this).parents(".ui-dialog").children(".ui-dialog-content").css({
-                        "min-height": "100%"
-                    });
-                } else {
-                    $(this).parents(".ui-dialog").css({
-                        "position": "fixed",
-                        "border-radius": "0",
-                        "top": 0,
-                        "left": 0,
-                        "height": "95vh",
-                        "width": "100vw",
-                        "z-index": "999"
-                    });
-                    $(this).parents(".ui-dialog").children(".ui-dialog-content").css({
-                        "min-height": "96vh"
-                    });
+    
+    if ($(this).attr("target") == "_blank" || $(this).attr("data-popup") == "no") {
+
+    } else {
+        evt.preventDefault();
+        $("<div title=\"" + $(this).children("p").html() + "\"><iframe src=\"" + $(this).attr("href") + "\" style=\"border:none; min-height:100%; min-width: 100%;\"></iframe></div>").dialog(
+            {
+                height: $(window).height() / 1.5,
+                width: $(window).width() / 1.5,
+                closeOnEscape: true,
+                closeText: "Fermer",
+                appendTo: "#inload",
+                iconButtons: [
+                {
+                    text: "Agrandir",
+                    icon: "ui-icon-arrow-4-diag",
+                    click: function (evt) {
+                        if (parseInt($(this).parents(".ui-dialog").css("width")) == $(window).width()) {
+                            $(this).parents(".ui-dialog").css({
+                                "border-radius": "5px",
+                                "top": "16.5vh",
+                                "left": "16.5vw",
+                                "height": $(window).height() / 1.5,
+                                "width": $(window).width() / 1.5
+                            });
+                            $(this).parents(".ui-dialog").children(".ui-dialog-content").css({
+                                "min-height": "100%"
+                            });
+                        } else {
+                            $(this).parents(".ui-dialog").css({
+                                "position": "fixed",
+                                "border-radius": "0",
+                                "top": 0,
+                                "left": 0,
+                                "height": "95vh",
+                                "width": "100vw",
+                                "z-index": "999"
+                            });
+                            $(this).parents(".ui-dialog").children(".ui-dialog-content").css({
+                                "min-height": "96vh"
+                            });
+                        }
+                    }
+                },
+                {
+                    text: "Réduire",
+                    icon: "ui-icon-arrowthickstop-1-s",
+                    click: function (evt) {
+
+                    }
+                },
+                {
+                    text: "Ouvrir dans un nouvel onglet",
+                    icon: "ui-icon-extlink",
+                    click: function (evt) {
+                        window.open($(this).parents(".ui-dialog").children(".ui-dialog-content").children("iframe").attr("src"), "_newtab");
+                    }
                 }
-            }
-        },
-        {
-            text: "Réduire",
-            icon: "ui-icon-arrowthickstop-1-s",
-            click: function (evt) {
-
-            }
-        },
-        {
-            text: "Ouvrir dans un nouvel onglet",
-            icon: "ui-icon-extlink",
-            click: function (evt) {
-                window.open($(this).parents(".ui-dialog").children(".ui-dialog-content").children("iframe").attr("src"), "_newtab");
-            }
-        }
-    ]
-    }).draggable({ containment: "#inload", scroll: false });
-
+            ]
+            }).draggable({ containment: "#inload", scroll: false });
+    }
 });
 
 
