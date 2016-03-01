@@ -32,6 +32,7 @@ function init(evt) {
     $("#topmenuicon").click(function (evt) {
         $("#topmenuicon").css("color", "white");
         $("#topmenu").show();
+        $("#top").css("mix-blend-mode", "normal");
         setTimeout(function(){ topmenu=VISIBLE; }, 10);
     });
 
@@ -39,6 +40,7 @@ function init(evt) {
         if(topmenu==VISIBLE){
             $("#topmenuicon").css("color", "");
             $("#topmenu").hide();
+            $("#top").css("mix-blend-mode", "");
             setTimeout(function(){ topmenu=NOTVISIBLE; }, 10);
         }
     });
