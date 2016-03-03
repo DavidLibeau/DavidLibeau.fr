@@ -19,9 +19,7 @@ a.btn{text-decoration:none;}
 	background-image: none;
 	color: #777;
 	border: 0;
-	min-height: 40px;
-	line-height: 40px;
-	padding: 5px;
+	padding: 10px;
     margin-bottom: 20px;
 
 	-webkit-box-shadow: none;
@@ -41,10 +39,11 @@ a.btn{text-decoration:none;}
     text-decoration:none;
     text-decoration-style: none;
     cursor: pointer;
+    
 }
 
 .btn:hover, [type="submit"]:hover {
-	background-color: #fff;
+	background-color: #fafafa;
 	color: #333;
 }
 

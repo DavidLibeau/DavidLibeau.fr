@@ -1,3 +1,9 @@
+@font-face {    font-family: 'BebasNeue';    src: url('../font/BebasNeue.otf') format('truetype');    font-weight: normal;    font-style: normal;}
+
+[font-family="'BebasNeue'"]{
+    font-family: 'Bebas Neue'!important;
+}
+
 body {
     overflow: hidden;
 }
@@ -54,6 +60,7 @@ footer {
     line-height: 8vh;
     margin: 1.5vh 3vh;
     text-shadow: 0 2px 5px rgba(0,0,0,0.16),0 2px 10px rgba(0,0,0,0.12);
+    cursor: pointer;
 }
 #topmenu {
     top: 11vh;
@@ -74,7 +81,23 @@ footer {
 }
 
 #bottom>h2 {   
+    margin: -5vh -5vw;
+    padding: 5vh 5vw;
+    padding-bottom: 2vh;
+    margin-bottom: 0;
     text-shadow: 0 2px 5px rgba(0,0,0,0.16),0 2px 10px rgba(0,0,0,0.12);
+    cursor: pointer;
+    background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(255,255,255,0.99) 1%, rgba(255,255,255,0) 100%);
+    background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,0.99) 1%,rgba(255,255,255,0) 100%);
+    background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(255,255,255,0.99) 1%,rgba(255,255,255,0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 );
+    z-index: 10;
+}
+
+#fleche {
+    position: relative;
+    top: 0.05em;
+    height: 0.8em;
 }
 
 #hashtags>span {
@@ -147,15 +170,54 @@ footer {
     width: 100%;
     height: 300px;
 }
-#CV>img {
-    max-width: 1000px;
-    max-height: 100vh;
-    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
-    -webkit-transition: all 0.1s ease-in-out;
-    -moz-transition: all 0.1s ease-in-out;
-    -o-transition: all 0.1s ease-in-out;
-    transition: all 0.1s ease-in-out;
+
+
+#CV_experience {
+    width: 100%;
+    margin-left: -5vw;
+    margin-top: 5vh;
+}#CV_btn {    float: right;    position: relative;    margin-top: -10vh;}#annonce {
+    position: relative;
+    padding: 2vh;
+    border-radius: 10px;
+    background-color: #EDEDED;
+    margin-top: 5vh;
 }
-#CV>img:hover{
-    box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+#annonce:before {
+    content: "";
+    position: absolute;
+    right: 100%;
+    top: 26px;
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-right: 10px solid #EDEDED;
+    border-bottom: 8px solid transparent;
+}
+#annonce>p {
+    margin: 0;
+}
+#annonce>p>a {
+    display: inline-block;
+    margin-top: 1vh;
+    padding: 1vh;
+    border-radius: 5px;
+    background-color: #0070c0;
+    color: white;
+    text-decoration: none;
+}
+#annonce>p>a:hover {
+    opacity: 0.9;
+}
+#annonce>p>a>i {
+    margin-right: 1vh;
+    transform-origin: left;
+    -webkit-transition: all 0.1s ease;
+    -moz-transition: all 0.1s ease;
+    -o-transition: all 0.1s ease;
+    transition: all 0.1s ease;
+
+}
+#annonce>p>a:hover>i{
+    transform: rotate(-20deg);
 }
