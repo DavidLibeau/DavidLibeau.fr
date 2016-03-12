@@ -3,7 +3,7 @@ $(document).ready(function () {
         $("#inload").css("height", $(document).height() + "px");
         $(window).scroll(scrollBlock);
         scrollBlock();
-        console.log($(document).height());
+        //console.log($(document).height());
         $("body").css("overflow", "auto");
     }, 10);
 
@@ -22,7 +22,7 @@ $(document).ready(function () {
 
 function scrollBlock(evt) {
     var scroll = parseInt(($(window).scrollTop() / $(window).height()) * 100);
-    console.log(scroll + "%");
+    //console.log(scroll + "%");
     if(scroll>=72){
         
         $("#fleche").css("transform", "rotate(-"+90+"deg)");
@@ -43,10 +43,14 @@ function scrollBlock(evt) {
             "bottom": "0"
         });
         $("#bottom>*").css("top", "0px");
+
+        if($("#inload").css("height")!=$(document).height()){
+            $("#inload").css("height", $(document).height() + "px");
+        }
     }
 
     if($(window).scrollTop()==$(document).height()-$(window).height()){
-        console.log("----- END -----");
+        //console.log("----- END -----");
         $("#bottom").css({
             "bottom": "1vh"
         });

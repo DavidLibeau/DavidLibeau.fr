@@ -15,8 +15,14 @@ body {
 #header {
     position: relative!important;
     height: 70vh!important;
-    padding-top: 15vh!important;
+    padding-top: 13vh!important;
+    padding-bottom: 1vh!important;
+    overflow-x: hidden!important;
 }
+#header:hover {
+    overflow-x: scroll!important;
+}
+
 
 body .panel {
     background-color: white;
@@ -74,6 +80,7 @@ footer {
     padding: 5vh 5vw;
     overflow: hidden;
     background-color: white;
+    z-index: 20;
 }
 #bottom>* {
     position: relative;
@@ -205,9 +212,13 @@ footer {
     background-color: #0070c0;
     color: white;
     text-decoration: none;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
 }
 #annonce>p>a:hover {
-    opacity: 0.9;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.1), 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 #annonce>p>a>i {
     margin-right: 1vh;
