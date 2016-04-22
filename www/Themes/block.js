@@ -7,17 +7,21 @@ $(document).ready(function () {
         $("body").css("overflow", "auto");
     }, 10);
 
-    $("#top>h1").click(function(){
+    $("#top>h1").click(function () {
         $("html, body").animate({
             scrollTop: "0px"
         }, 500);
     });
 
-    $("#bottom>h2").click(function(){
+    $("#bottom>h2").click(function () {
         $("html, body").animate({
-            scrollTop: $(window).height()*0.72+"px"
+            scrollTop: $(window).height() * 0.72 + "px"
         }, 500);
     });
+
+    setTimeout(function () {
+        $("#logo").css("opacity", "1").attr("src", $("#logo").attr("src") + "#" + new Date()).click(function(){$("#logo").attr("src", $("#logo").attr("src") + "#" + new Date())});
+    }, 1000);
 });
 
 function scrollBlock(evt) {

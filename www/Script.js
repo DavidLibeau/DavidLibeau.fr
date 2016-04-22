@@ -30,9 +30,9 @@ function init(evt) {
     $("#topmenu").menu();
 
     $("#topmenuicon").click(function (evt) {
-        $("#topmenuicon").css("color", "white");
+        $("#topmenuicon").css("color", "#0070c0");
         $("#topmenu").show();
-        $("#top").css("mix-blend-mode", "normal");
+        /*$("#top").css("mix-blend-mode", "normal");*/
         setTimeout(function(){ topmenu=VISIBLE; }, 10);
     });
 
