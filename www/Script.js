@@ -44,6 +44,13 @@ function init(evt) {
             setTimeout(function(){ topmenu=NOTVISIBLE; }, 10);
         }
     });
+
+    $(".bulleAlerte").tooltip({
+        track: true,
+        content: function(){
+            return "<i class= \"fa fa-exclamation-triangle\" aria-hidden=\"true\"></i> "+$(this).attr("title");
+        }
+    });
 }
 
 
