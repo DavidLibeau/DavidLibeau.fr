@@ -20,7 +20,7 @@ $(document).ready(function () {
     });
 
     setTimeout(function () {
-        $("#logo").css("opacity", "1").attr("src", $("#logo").attr("src") + "#" + new Date()).click(function(){$("#logo").attr("src", $("#logo").attr("src") + "#" + new Date())});
+        $("#logo").css("opacity", "1").attr("src", $("#logo").attr("src") + "#" + new Date().getTime()).click(function(){$("#logo").attr("src", $("#logo").attr("src") + "#" + new Date().getTime())});
     }, 1000);
 });
 
