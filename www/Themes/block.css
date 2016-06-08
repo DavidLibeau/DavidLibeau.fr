@@ -13,16 +13,32 @@ body {
 }
 
 #header {
-    position: relative!important;
-    height: 70vh!important;
+    height: 86vh!important;
     padding-top: 13vh!important;
     padding-bottom: 1vh!important;
-    overflow-x: hidden!important;
 }
-#header:hover {
-    overflow-x: scroll!important;
+#panelsheader{
+    visibility: hidden;
 }
-
+#titleheader{
+    display: block!important;
+    width: 100vw;
+    text-align: center;
+    padding-top: 20vh;
+    color: white;
+}
+#titleheader>button{
+    padding: 5px;
+    cursor: pointer;
+}
+#titleheader>h1{
+    letter-spacing:0px;
+    -webkit-transition: letter-spacing 60s ease-out;
+    -moz-transition: letter-spacing 60s ease-out;
+    -ms-transition: letter-spacing 60s ease-out;
+    -o-transition: letter-spacing 60s ease-out;
+    transition: letter-spacing 60s ease-out;
+}
 
 body .panel {
     background-color: white;
@@ -48,6 +64,7 @@ footer {
 }
 
 #top, #bottom {
+    width: 70vw;
     min-height: 10vh;
     margin: 1vh 10vw;
     box-shadow: #bababa -1px 1px, #bababa -2px 2px, #bababa -3px 3px, #bababa -4px 4px, #bababa -5px 5px;
@@ -61,7 +78,7 @@ footer {
     background-color: white;
 }
 
-#top>h1, #topmenuicon {
+#top>h1, #topmenuicon,#top>.fa-th-large {
     font-size: 7vh;
     color: black;
     line-height: 11vh;
@@ -69,20 +86,20 @@ footer {
     text-shadow: 0 2px 5px rgba(0,0,0,0.16),0 2px 10px rgba(0,0,0,0.12);
     cursor: pointer;
 }
+#topmenu {
+    top: 11vh;
+}
+
 #logo {
     height: 7vh;
     padding: 1.6vh 0;
     opacity: 0;
 }
-#topmenu {
-    top: 11vh;
-}
-
 
 
 #bottom {
-    position: relative;
-    width: 70vw;
+    position: fixed;
+    top: 84vh;
     padding: 5vh 5vw;
     overflow: hidden;
     background-color: white;

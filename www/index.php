@@ -104,6 +104,8 @@
     <?php if(isset($_GET["theme"]) && $_GET["theme"]=="block"){ ?>
     <h1><img id="logo" src="resrc/img/logoGIF.gif" alt="Logo David Libeau" title="David Libeau"/></h1>
     <?php } ?>
+    <i class="fa fa-th-large"></i>
+
     <span id="toptime">00:00</span>
 </div>
 

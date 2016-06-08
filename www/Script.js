@@ -36,6 +36,11 @@ function init(evt) {
         setTimeout(function(){ topmenu=VISIBLE; }, 10);
     });
 
+    $("#top>.fa-th-large,#titleheader>button").click(function () {
+        $("#panelsheader").css("visibility", "visible");
+        $("#titleheader").css("visibility", "hidden");
+    });
+
    $(window).click(function () {
         if(topmenu==VISIBLE){
             $("#topmenuicon").css("color", "");

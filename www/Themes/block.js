@@ -1,13 +1,13 @@
 $(document).ready(function () {
     setTimeout(function () {
-        $("#inload").css("height", $(document).height() + "px");
+        $("#inload").css("height", ((84 * $(window).height()) / 100) + $("#bottom").height() + "px");
         $(window).scroll(scrollBlock);
         scrollBlock();
         //console.log($(document).height());
         $("body").css("overflow", "auto");
     }, 10);
 
-    $("#top>h1").click(function () {
+    $("#top").click(function () {
         $("html, body").animate({
             scrollTop: "0px"
         }, 500);
@@ -20,44 +20,52 @@ $(document).ready(function () {
     });
 
     setTimeout(function () {
-        $("#logo").css("opacity", "1").attr("src", $("#logo").attr("src") + "#" + new Date().getTime()).click(function(){$("#logo").attr("src", $("#logo").attr("src") + "#" + new Date().getTime())});
+        $("#logo").css("opacity", "1").attr("src", $("#logo").attr("src") + "#" + new Date().getTime()).click(function () { $("#logo").attr("src", $("#logo").attr("src") + "#" + new Date().getTime()) });
     }, 1000);
+
+    setTimeout(function () {
+        $("#titleheader>h1").css("letter-spacing", "30px");
+    }, 100);
 });
 
 function scrollBlock(evt) {
     var scroll = parseInt(($(window).scrollTop() / $(window).height()) * 100);
     //console.log(scroll + "%");
-    if(scroll>=72){
+    if(scroll>=72){ //72% de scroll=100-28(hauteur de #top)
         
         $("#fleche").css("transform", "rotate(-"+90+"deg)");
-
-
+        
         $("#bottom").css({
-            "position": "fixed",
             "top": "13vh",
             "bottom": "-10vh"
         });
         $("#bottom>*:nth-child(n+2)").css("top", -($(window).scrollTop()-($(window).height()*0.72))+"px"); //-($(window).height()*0.66))-(15/$(window).height()*100)
-    } else {
+
+        $("#header").css({
+            "display": "none",
+            "opacity": 0
+        });
+
+    } else { //scroll normal
         $("#fleche").css("transform", "rotate(-"+90*(scroll/72)+"deg)");
 
-        $("#bottom").css({
-            "position": "relative",
-            "top": "0",
-            "bottom": "0"
-        });
+        $("#bottom").css("top", 84-scroll+"vh");
         $("#bottom>*").css("top", "0px");
 
-        if($("#inload").css("height")!=$(document).height()){
-            $("#inload").css("height", $(document).height() + "px");
-        }
+
+        $("#header").css({
+            "display": "block",
+            "opacity": 1 - (scroll / 72)
+        });
     }
 
-    if($(window).scrollTop()==$(document).height()-$(window).height()){
+    if($(window).scrollTop()==$(document).height()-$(window).height()){ //fin de page
         //console.log("----- END -----");
         $("#bottom").css({
             "bottom": "1vh"
         });
+
+        $("#header").css("visibility", "visible");
     }
 
 }
