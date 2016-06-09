@@ -28,7 +28,6 @@ function init(evt) {
     setInterval(time, 5000);
 
     $("#topmenu").menu();
-
     $("#topmenuicon").click(function (evt) {
         $("#topmenuicon").css("color", "#0070c0");
         $("#topmenu").show();

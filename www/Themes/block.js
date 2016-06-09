@@ -1,6 +1,16 @@
 $(document).ready(function () {
     setTimeout(function () {
         $("#inload").css("height", ((84 * $(window).height()) / 100) + $("#bottom").height() + "px");
+        /*$(window).resize(function () {
+            $("html, body").animate({
+                scrollTop: "0px"
+            }, 10);
+            scrollBlock();
+            setTimeout(function () {
+                $("#inload").css("height", ((84 * $(window).height()) / 100) + $("#bottom").height() + "px");
+            }, 100);
+        });*/
+
         $(window).scroll(scrollBlock);
         scrollBlock();
         //console.log($(document).height());
@@ -20,11 +30,11 @@ $(document).ready(function () {
     });
 
     setTimeout(function () {
-        $("#logo").css("opacity", "1").attr("src", $("#logo").attr("src") + "#" + new Date().getTime()).click(function () { $("#logo").attr("src", $("#logo").attr("src") + "#" + new Date().getTime()) });
+        $("#logo").css("opacity", "1").attr("src", $("#logo").attr("src") + "?" + new Date().getTime()).click(function () { $("#logo").attr("src", $("#logo").attr("src") + "#" + new Date().getTime()) });
     }, 1000);
 
     setTimeout(function () {
-        $("#titleheader>h1").css("letter-spacing", "30px");
+        $("#titleheader>h1").css("letter-spacing", "1.5vw");
     }, 100);
 });
 
@@ -39,7 +49,7 @@ function scrollBlock(evt) {
             "top": "13vh",
             "bottom": "-10vh"
         });
-        $("#bottom>*:nth-child(n+2)").css("top", -($(window).scrollTop()-($(window).height()*0.72))+"px"); //-($(window).height()*0.66))-(15/$(window).height()*100)
+        $("#bottom>*:nth-child(n+2)").css("top", -($(window).scrollTop()-($(window).height()*0.72))+"px");
 
         $("#header").css({
             "display": "none",
