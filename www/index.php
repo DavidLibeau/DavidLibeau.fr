@@ -13,6 +13,21 @@
 	<?php if(isset($_GET["theme"]) && $_GET["theme"]!=""){ ?>
 	<link rel="stylesheet" href="Themes/<?php echo($_GET["theme"]); ?>.css" type="text/css" />
 	<?php } ?>
+
+    
+    <meta name="twitter:card" content="summary">
+	<meta name="twitter:site" content="DavidLibeau.fr">
+	<meta name="twitter:title" content="DavidLibeau.fr">
+	<meta name="twitter:description" content="DavidLibeau.fr">
+	<meta name="twitter:creator" content="DavidLibeau">
+	<meta name="twitter:image" content="http://davidlibeau.fr/resrc/img/dlfr_preview.png">
+	<meta property="og:title" content="DavidLibeau.fr">
+	<meta property="og:type" content="article">
+	<meta property="og:url" content="https://DavidLibeau.fr">
+	<meta property="og:image" content="http://davidlibeau.fr/resrc/img/dlfr_preview.png">
+	<meta property="og:description" content="DavidLibeau.fr">
+	<meta property="og:site_name" content="DavidLibeau.fr">
+
 	</head>
 
 
@@ -191,7 +206,7 @@
 
     <div id="annonce">
         <h5>Je recherche une alternance dans le développement web pour l'année 2016-2017</h5>
-        <p>Dans l'Ouest (Bretagne/Pays de la Loire) ou sur Paris, je veux intégrer une équipe web et travailler sur des projets innovants tout en poursuivant mes études (une <a href="http://www.iut-laval.univ-lemans.fr/fr/mmi-web-et-creation-multimedia/licence-pro-crspm.html" target="_blank" title="Découvrir la formation sur le site de l'IUT de Laval">Conception et Réalisation de Services et Produits Multimédia</a>).<br/><a href="/Contact" target="_blank" title="Contactez-moi" class="btn"><i class="fa fa-thumbs-up"></i>Donner une chance !</a></p>
+        <p>Dans l'Ouest (Bretagne/Pays de la Loire) ou sur Paris, je veux intégrer une équipe web et travailler sur des projets innovants tout en poursuivant mes études (une Licence <a href="http://www.iut-laval.univ-lemans.fr/fr/mmi-web-et-creation-multimedia/licence-pro-crspm.html" target="_blank" title="Découvrir la formation sur le site de l'IUT de Laval">Conception et Réalisation de Services et Produits Multimédia</a>).<br/><a href="/Contact" target="_blank" title="Contactez-moi" class="btn"><i class="fa fa-thumbs-up"></i>Donner une chance !</a></p>
     </div>
 
     <p><br/><br/>Rien de plus... :)</p>
