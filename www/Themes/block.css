@@ -10,6 +10,7 @@ body {
 
 #inload {
     position: relative;
+    height: 172vh;
 }
 
 #header {
@@ -65,7 +66,7 @@ footer {
     display: none;
 }
 
-#top, #bottom {
+#top, main {
     width: 70vw;
     min-height: 10vh;
     margin: 1vh 10vw;
@@ -99,20 +100,21 @@ footer {
 }
 
 
-#bottom {
+main {
     position: fixed;
+    height: 74vh;
     top: 84vh;
     padding: 5vh 5vw;
     overflow: hidden;
     background-color: white;
     z-index: 20;
 }
-#bottom>* {
+main>* {
     position: relative;
     top: 0px;
 }
 
-#bottom>h2 {
+main>h2:first-child,main>h1:first-child {
     font-size: 6vh;
     text-align: left;
     white-space: nowrap;
@@ -127,6 +129,15 @@ footer {
     background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(255,255,255,0.99) 1%,rgba(255,255,255,0) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 );
     z-index: 10;
+}
+
+.content{
+    width: auto;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: none;
+    box-shadow: none;
 }
 
 #fleche {
@@ -276,7 +287,7 @@ footer {
     #top{
         width: 96%!important;
         margin: 1vh 3vw!important;
-    }    #bottom {        margin: 1vh 3vw!important;
+    }    main {        margin: 1vh 3vw!important;
         width: 85.5%!important;
     }
 }

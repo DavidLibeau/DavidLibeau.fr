@@ -1,15 +1,8 @@
+"use strict";
+var STOPSCROLL = false;
+
 $(document).ready(function () {
     setTimeout(function () {
-        $("#inload").css("height", ((84 * $(window).height()) / 100) + $("#bottom").height() + "px");
-        /*$(window).resize(function () {
-            $("html, body").animate({
-                scrollTop: "0px"
-            }, 10);
-            scrollBlock();
-            setTimeout(function () {
-                $("#inload").css("height", ((84 * $(window).height()) / 100) + $("#bottom").height() + "px");
-            }, 100);
-        });*/
 
         $(window).scroll(scrollBlock);
         scrollBlock();
@@ -18,12 +11,15 @@ $(document).ready(function () {
     }, 10);
 
     $("#top").click(function () {
+        $("main").animate({
+            scrollTop: "0px"
+        }, 0);
         $("html, body").animate({
             scrollTop: "0px"
         }, 500);
     });
 
-    $("#bottom>h2").click(function () {
+    $("main>h2").click(function () {
         $("html, body").animate({
             scrollTop: $(window).height() * 0.72 + "px"
         }, 500);
@@ -36,20 +32,60 @@ $(document).ready(function () {
     setTimeout(function () {
         $("#titleheader>h1").css("letter-spacing", "1.5vw");
     }, 100);
+
+
+    $(".panel").on("mousedown", function (evt) {
+        evt.preventDefault();
+    }).click(function (evt) {
+
+        if ($(this).attr("target") == "_blank" || $(this).attr("data-popup") == "no") {
+
+        } else {
+            evt.preventDefault();
+            $.ajax({
+                type: "GET",
+                url: $(this).attr("href"),
+                data: { data: "pure" },
+                dataType: "html",
+                complete: function (returned) {
+                    var htmldom = $.parseHTML(returned.responseText);
+                    //console.log(htmldom);
+                    var i = 0;
+                    while (htmldom[i].className != "content") {
+                        i++;
+                    }
+                    if (i !== 0) {
+                        $("main").html(htmldom[i].innerHTML);
+                        $("html, body").animate({
+                            scrollTop: $(window).height() * 0.72-100 + "px"
+                        }, 400);
+                        console.log(htmldom[i].innerHTML);
+                    }
+                }
+            });
+        }
+    });
+
 });
 
 function scrollBlock(evt) {
+    if ($("main").scrollTop() != 0) {
+        $("html, body").animate({
+            scrollTop: $("#inload").height()+ "px"
+        }, 0);
+    }
+
     var scroll = parseInt(($(window).scrollTop() / $(window).height()) * 100);
     //console.log(scroll + "%");
     if(scroll>=72){ //72% de scroll=100-28(hauteur de #top)
         
         $("#fleche").css("transform", "rotate(-"+90+"deg)");
         
-        $("#bottom").css({
+        $("main").css({
             "top": "13vh",
-            "bottom": "-10vh"
+            "overflow-y": "scroll"
         });
-        $("#bottom>*:nth-child(n+2)").css("top", -($(window).scrollTop()-($(window).height()*0.72))+"px");
+        //$("main>*:nth-child(n+2)").css("top", -($(window).scrollTop()-($(window).height()*0.72))+"px");
 
         $("#header").css({
             "display": "none",
@@ -59,8 +95,10 @@ function scrollBlock(evt) {
     } else { //scroll normal
         $("#fleche").css("transform", "rotate(-"+90*(scroll/72)+"deg)");
 
-        $("#bottom").css("top", 84-scroll+"vh");
-        $("#bottom>*").css("top", "0px");
+        $("main").css({
+            "top": 84-scroll+"vh",
+            "overflow-y":"hidden"        
+        });
 
 
         $("#header").css({
@@ -71,41 +109,20 @@ function scrollBlock(evt) {
 
     if($(window).scrollTop()==$(document).height()-$(window).height()){ //fin de page
         //console.log("----- END -----");
-        $("#bottom").css({
-            "bottom": "1vh"
-        });
 
         $("#header").css("visibility", "visible");
+        $("#inload").on("mousewheel", function (event) {
+            console.log(event.deltaX, event.deltaY, event.deltaFactor);
+            //console.log($("main").scrollTop());
+            $("main").scrollTop($("main").scrollTop() + (-event.deltaY * event.deltaFactor));
+        });
+
+    }else{
+        $("#inload").off("mousewheel");
     }
 
 }
 
-
-
-
-/* MAP 
-
-var map = L.map('map', {
-    scrollWheelZoom: false,
-    center: [51.505, -0.09],
-    zoom: 13
-});
-
-L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-	maxZoom: 18,
-	attribution: '&copy;',
-	id: 'mapbox.streets'
-}).addTo(map);
-
-
-L.marker([51.5, -0.09]).bindPopup("<b>Hello world!</b><br>I am a popup.").addTo(map);
-
-function onMapClick(e) {
-    alert("You clicked the map at " + e.latlng);
-}
-
-map.on('click', onMapClick);
-*/
 
 
 
