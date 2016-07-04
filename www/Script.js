@@ -2,11 +2,7 @@
 var topmenu = false;
 var VISIBLE = true;
 var NOTVISIBLE = false;
-//var timeouthoverpanel;
-window.addEventListener("load", init);
-//setTimeout(function () { document.body.style.opacity = "1" }, 50);
-//var bodyHeight = parseInt(window.getComputedStyle(document.body).getPropertyValue("height"), 10);
-//window.scrollTo(0, bodyHeight/2);
+window.addEventListener("load", init);
 
 function init(evt) {
     $("#loadanimation").fadeOut();
@@ -16,26 +12,13 @@ function init(evt) {
         $("#scrollOrdiScroll").show();
     }
     $("#inload").css("background-image", "url(./resrc/img/B3bis.jpg)");
-    //$("body").css("overflow", "auto");
-    //var bodyHeight = parseInt(window.getComputedStyle(document.body).getPropertyValue("height"), 10);
-    //bodyHeight = bodyHeight - 200;
-    //window.scrollTo(0, bodyHeight);
-    //setTimeout(function () { window.scrollTo(0, bodyHeight) }, 50);
-    //window.scrollTo(0, document.body.scrollTop -(0.1*window.innerHeight)); 
     console.log("Page chargée !");
-    //document.addEventListener('scroll', endScroll);
 
     $("#topmenu").menu();
     $("#topmenuicon").click(function (evt) {
         $("#topmenuicon").css("color", "#0070c0");
         $("#topmenu").show();
-        /*$("#top").css("mix-blend-mode", "normal");*/
         setTimeout(function(){ topmenu=VISIBLE; }, 10);
-    });
-
-    $("#top>.fa-th-large,#titleheader>button").click(function () {
-        $("#panelsheader").css("visibility", "visible");
-        $("#titleheader").css("visibility", "hidden");
     });
 
    $(window).click(function () {
@@ -57,7 +40,7 @@ function init(evt) {
 
 
 
-//////// Drag & drop scroll
+/* Drag & drop scroll */
 
   var curDown = false,
       curYPos = 0,

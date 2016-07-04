@@ -289,5 +289,6 @@ main>h2:first-child,main>h1:first-child {
         margin: 1vh 3vw!important;
     }    main {        margin: 1vh 3vw!important;
         width: 85.5%!important;
+        overflow-y: scroll!important;
     }
 }

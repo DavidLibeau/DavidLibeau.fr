@@ -6,6 +6,14 @@ $(document).ready(function () {
 
         $(window).scroll(scrollBlock);
         scrollBlock();
+        $("main").scroll(function () {
+            if ($(window).scrollTop() < ($(window).height() * 0.72)) {
+                $("html, body").animate({
+                    scrollTop: $(window).height() * 0.72 + "px"
+                }, 0);
+            }
+        });
+
         //console.log($(document).height());
         $("body").css("overflow", "auto");
     }, 10);
@@ -24,6 +32,13 @@ $(document).ready(function () {
             scrollTop: $(window).height() * 0.72 + "px"
         }, 500);
     });
+
+    /* Btn découvrir */
+    $("#top>.fa-th-large,#titleheader>button").click(function () {
+        $("#panelsheader").css("visibility", "visible");
+        $("#titleheader").css("visibility", "hidden");
+    });
+
 
     setTimeout(function () {
         $("#logo").css("opacity", "1").attr("src", $("#logo").attr("src") + "?" + new Date().getTime()).click(function () { $("#logo").attr("src", $("#logo").attr("src") + "#" + new Date().getTime()) });
@@ -57,7 +72,7 @@ $(document).ready(function () {
                     if (i !== 0) {
                         $("main").html(htmldom[i].innerHTML);
                         $("html, body").animate({
-                            scrollTop: $(window).height() * 0.72-100 + "px"
+                            scrollTop: $(window).height() * 0.72 - 100 + "px"
                         }, 400);
                         console.log(htmldom[i].innerHTML);
                     }
@@ -117,9 +132,23 @@ function scrollBlock(evt) {
             $("main").scrollTop($("main").scrollTop() + (-event.deltaY * event.deltaFactor));
         });
 
+        /* Afficher les panels */
+        $("#panelsheader").css("visibility", "visible");
+        $("#titleheader").css("visibility", "hidden");
     }else{
         $("#inload").off("mousewheel");
     }
+
+    /*if(scroll>=50){
+        $("#inload").on("click", function () {
+            $("main").animate({
+                scrollTop: "0px"
+            }, 0);
+            $("html, body").animate({
+                scrollTop: "0px"
+            }, 200);
+        });
+    }*/
 
 }
 
