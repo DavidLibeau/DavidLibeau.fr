@@ -2,8 +2,14 @@
 var STOPSCROLL = false;
 
 $(document).ready(function () {
-    setTimeout(function () {
+    $(".panel").css({
+        "transform": "translateX(30px) rotateY(50deg)",
+        "transform-origin": "center left",
+        "visibility": "hidden"
+    }); //init animation
+    $("#panelsheader").css("opacity", 0);
 
+    setTimeout(function () {
         $(window).scroll(scrollBlock);
         scrollBlock();
         $("main").scroll(function () {
@@ -13,8 +19,6 @@ $(document).ready(function () {
                 }, 0);
             }
         });
-
-        //console.log($(document).height());
         $("body").css("overflow", "auto");
     }, 10);
 
@@ -24,7 +28,7 @@ $(document).ready(function () {
         }, 0);
         $("html, body").animate({
             scrollTop: "0px"
-        }, 500);
+        }, 400);
     });
 
     $("main>h2").click(function () {
@@ -36,7 +40,22 @@ $(document).ready(function () {
     /* Btn découvrir */
     $("#top>.fa-th-large,#titleheader>button").click(function () {
         $("#panelsheader").css("visibility", "visible");
+        $("#panelsheader").animate({
+            opacity: 1
+        }, 500);
+
         $("#titleheader").css("visibility", "hidden");
+        $(".panel").each(function (i) {//animation
+            var animationPanel = function (elementPanel) {
+                $(elementPanel).css({
+                    "transform": "translateX(0px) rotateY(0deg)",
+                    "visibility": "visible"
+                });
+
+            }
+            setTimeout(animationPanel, 15 * (i - 1), this);
+        });
+
     });
 
 
@@ -135,6 +154,7 @@ function scrollBlock(evt) {
         /* Afficher les panels */
         $("#panelsheader").css("visibility", "visible");
         $("#titleheader").css("visibility", "hidden");
+        $(".panel").css("transform", "scale(1)");//animation
     }else{
         $("#inload").off("mousewheel");
     }
