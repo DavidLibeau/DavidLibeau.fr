@@ -5,7 +5,7 @@
     <?php require "resrc/html/AllHead.html"; ?>
     <link rel="stylesheet" href="StyleSheet.css" type="text/css" />
     <link href="ordiScroll.css" rel="stylesheet"/>
-    <link rel="icon" type="image/png" href="//resrc/img/favicon.png" />
+    <link rel="icon" type="image/png" href="/resrc/img/favicon.png" />
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
     <title>David Libeau</title> <!-- - Cr&eacute;ation de site web, r&eacute;alisation de vid&eacute;o... -->
     <meta name="keywords" content="David Libeau, création site web, réalisation vidéo" />
@@ -20,11 +20,11 @@
 	<meta name="twitter:title" content="DavidLibeau.fr">
 	<meta name="twitter:description" content="DavidLibeau.fr">
 	<meta name="twitter:creator" content="DavidLibeau">
-	<meta name="twitter:image" content="http://davidlibeau.fr/resrc/img/dlfr_preview.png">
+	<meta name="twitter:image" content="https://davidlibeau.fr/resrc/img/dlfr_preview.png">
 	<meta property="og:title" content="DavidLibeau.fr">
 	<meta property="og:type" content="article">
 	<meta property="og:url" content="https://DavidLibeau.fr">
-	<meta property="og:image" content="http://davidlibeau.fr/resrc/img/dlfr_preview.png">
+	<meta property="og:image" content="https://davidlibeau.fr/resrc/img/dlfr_preview.png">
 	<meta property="og:description" content="DavidLibeau.fr">
 	<meta property="og:site_name" content="DavidLibeau.fr">
 
