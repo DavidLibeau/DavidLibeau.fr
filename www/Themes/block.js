@@ -153,8 +153,22 @@ function scrollBlock(evt) {
 
         /* Afficher les panels */
         $("#panelsheader").css("visibility", "visible");
+        $("#panelsheader").animate({
+            opacity: 1
+        }, 500);
+
         $("#titleheader").css("visibility", "hidden");
-        $(".panel").css("transform", "scale(1)");//animation
+        $(".panel").each(function (i) {//animation
+            var animationPanel = function (elementPanel) {
+                $(elementPanel).css({
+                    "transform": "translateX(0px) rotateY(0deg)",
+                    "visibility": "visible"
+                });
+
+            }
+            setTimeout(animationPanel, 15 * (i - 1), this);
+        });
+
     }else{
         $("#inload").off("mousewheel");
     }
