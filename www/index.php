@@ -203,10 +203,6 @@
             </svg>
             <a id="CV_btn" href="/CV" target="_blank" class="btn" title="On apprend plein de choses !">Voir le CV complet</a>
 
-        <div id="annonce">
-            <h5>Je recherche une alternance dans le développement web pour l'année 2016-2017</h5>
-            <p>Dans l'Ouest (Bretagne/Pays de la Loire) ou sur Paris, je veux intégrer une équipe web et travailler sur des projets innovants tout en poursuivant mes études (une Licence <a href="http://www.iut-laval.univ-lemans.fr/fr/mmi-web-et-creation-multimedia/licence-pro-crspm.html" target="_blank" title="Découvrir la formation sur le site de l'IUT de Laval">Conception et Réalisation de Services et Produits Multimédia</a>).<br/><a href="/Contact" target="_blank" title="Contactez-moi" class="btn"><i class="fa fa-thumbs-up"></i>Donner une chance !</a></p>
-        </div>
 
         <p><br/><br/>Rien de plus... :)</p>
     </div>
