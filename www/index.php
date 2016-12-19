@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="StyleSheet.css" type="text/css" />
     <link href="ordiScroll.css" rel="stylesheet"/>
     <link rel="icon" type="image/png" href="/resrc/img/favicon.png" />
-    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
     <title>David Libeau</title> <!-- - Cr&eacute;ation de site web, r&eacute;alisation de vid&eacute;o... -->
     <meta name="keywords" content="David Libeau, création site web, réalisation vidéo" />
     <meta name="description" content="DavidLibeau.fr - Etudiant passionné par le multimédia" />
