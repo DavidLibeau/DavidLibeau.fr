@@ -2,7 +2,7 @@
 >Open Source of my website [DavidLibeau.fr](http://davidlibeau.fr)
 
 ### Licence
-Under Licence [Creative Commons CC-BY](http://creativecommons.org/licenses/by/3.0/)
+Under GNU public Licence : you can use, modify, publish, if you use the same licence and credit me.
 
 ### More info
 Note that this website is in french and was made progressively by a student (there are big mistakes, but I prefer to keep building new things).
