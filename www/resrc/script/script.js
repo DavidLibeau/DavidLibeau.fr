@@ -1,7 +1,10 @@
 "use strict";
 
+
+
 var noScroll = false;
 /* Drag & drop scroll */
+
 $(document).on("dragstart", function () {
     return false;
 });
@@ -32,6 +35,8 @@ $(window).mouseup(function () {
 });
 //url(\"resrc/img/cursor_HandsOpen.png\")
 
+
+
 /* Horizontal scroll */
 
 $(window).on("wheel", function (event) {
@@ -40,7 +45,10 @@ $(window).on("wheel", function (event) {
     }
 });
 
+
+
 /* Auro scroll */
+
 $.fn.scrollEnd = function (callback, timeout) {
     $(this).scroll(function () {
         var $this = $(this);
@@ -64,12 +72,12 @@ $("main").scrollEnd(autoScroll, 500);
 $(window).resizeEnd(autoScroll, 500);
 
 function autoScroll() {
-    if ($("#goVR").is(":hover")) {
+    if ($("section:nth-child(3)").is(":hover")) {
         var timeoutVR;
-        $("#goVR").mouseleave(function () {
+        $("section:nth-child(3)").mouseleave(function () {
             timeoutVR = setTimeout(autoScroll, 1500);
         });
-        $("#goVR").mouseenter(function () {
+        $("section:nth-child(3)").mouseenter(function () {
             clearTimeout(timeoutVR);
         });
     } else {
@@ -95,6 +103,8 @@ function changeAnchor(anchor) {
     }, 200);
 }
 
+
+
 /* Auto scroll on load */
 
 if (window.location.href.substring(window.location.href.indexOf("#") + 1) == "panels") {
@@ -111,20 +121,23 @@ $("main").scroll(function () {
 
 });
 
+
+
 /* Logo */
 
 setTimeout(function () {
-    $("#logo>img").css("opacity", "1").attr("src", $("#logo>img").attr("src") + "?" + new Date().getTime()).click(animLogo);
+    $("#logo img").css("opacity", "1").attr("src", $("#logo img").attr("src") + "?" + new Date().getTime()).click(animLogo);
 }, 500);
 
 function animLogo() {
-    $("#logo>img").attr("src", $("#logo>img").attr("src") + "#" + new Date().getTime())
+    $("#logo img").attr("src", $("#logo img").attr("src") + "#" + new Date().getTime())
 }
+
 
 
 /* Panels */
 
-$("#panels a:not(#logo)").click(function (evt) {
+$("#panels a:not(#logo a)").click(function (evt) {
     var $this = $(this);
     evt.preventDefault();
     noScroll = true;
@@ -182,4 +195,12 @@ $("#panels a:not(#logo)").click(function (evt) {
             },1000);
         }
     }, 300);
+});
+
+
+/* Panel:nth-child(1) */
+$(document).ready(function(){
+    setTimeout(function(){
+        $('#welcome [href="#panels"]').html('Entrer<i class="fa fa-arrow-right" aria-hidden="true" style="padding-left: 10px"></i>');
+    }, 1000);
 });

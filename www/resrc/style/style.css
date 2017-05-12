@@ -20,11 +20,12 @@ a {
     color: inherit;
     text-decoration: none;
 }
-p>a {
+p a {
     font-weight: bold;
 }
 a:hover {
     text-decoration: underline;
+    color: #424242;
 }
 a:active {
     transform: translateY(1px);
@@ -105,7 +106,8 @@ main>section{
 #welcome a {
     position: absolute;
     bottom: 30px;
-    left: calc(100% - 150px);
+    right: 30px;
+    color: white;
 }
 
 /* panels */
@@ -117,11 +119,12 @@ main>section{
     overflow-x: auto;
 }
 
-#panels h1 {
+#panels>div>ul>h1 {
     margin: 0;
     margin-bottom: 2vw;
 }
 #logo {
+    position: relative;
     display: inline-block;
     padding: 10px;
     background-color: white;
@@ -131,19 +134,38 @@ main>section{
     height: 5vw;
     opacity: 0;
 }
+#vrBadge {
+    position: absolute;
+    top: -8px;
+    right: -18px;
+    padding: 5px 10px;
+    padding-left: 12px;
+    font-size: 15px;
+    line-height: 20px;
+    background: #424242;
+    color: white;
+    border-radius: 20px;
+    box-shadow: #bababa -1px 1px, #bababa -2px 2px, #bababa -3px 3px;
+}
+#vrBadge i {
+    font-size: 0.9em;
+}
+#vrBadge:hover {
+    text-decoration: none;
+    background: black;
+}
 
-
-#panels ul {
+#panels>div>ul {
     padding: 0;
     list-style: none;
     white-space: normal;
 }
-#panels li {
+#panels>div>ul>li {
     display: inline-block;
     margin-right: 30px;
     margin-bottom: 2.5vw;
 }
-#panels li>a {
+#panels>div>ul>li>a {
     position: relative;
     display: block;
     height: 100%;
@@ -151,7 +173,7 @@ main>section{
     padding-right: 1vw;
     text-decoration: none;
 }
-#panels li>a::before, #panels li>a::after {
+#panels>div>ul>li>a::before, #panels>div>ul>li>a::after {
     content: "";
     position: absolute;
     display: block;
@@ -317,41 +339,13 @@ main>section{
     margin-right: 2vw;
 }
 
-/* goVR */
-#goVR {
-    min-width: 0;
-}
-#goVR>div {
-    display: flex;
-    align-items: center;
-    height: 100%;
-}
-#goVR a {
-    text-decoration: none;
-}
-#goVR h3 {
-    margin: 0;
-    margin-top: -60px;
-    margin-right: 10px;
-    font-family: "Bebas Neue", sans-serif;
-    font-size: 2.5em;
-    color: white;
-    text-align: right;
-    text-shadow: -5px 5px 5px rgba(66, 66, 66, 0.15);
-}
-#goVR img {
-    box-shadow: #bababa -1px 1px, #bababa -2px 2px, #bababa -3px 3px, #bababa -4px 4px, #bababa -5px 5px;
-    
-    -webkit-transition: all 0.2s ease;
-    -moz-transition: all 0.2s ease;
-    -ms-transition: all 0.2s ease;
-    -o-transition: all 0.2s ease;
-    transition: all 0.2s ease;
-}
-#goVR a:hover img {
-    margin-top: -10px;
-    margin-bottom: 10px;
-}
-#goVR a:hover h3 {
-    text-shadow: -3px 3px 5px rgba(66, 66, 66, 0.15);
+
+/** OTHER **/
+
+/* .extLinks */
+ul.extLinks>li>a::after{
+    content: attr(href);
+    padding-left: 5px;
+    font-size: 12px;
+    opacity: 0.5;
 }

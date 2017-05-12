@@ -7,9 +7,9 @@
     <title>DavidLibeau.fr</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="theme-color" content="#0070C0">
-    <link rel="icon" href="resrc/img/favicon.png" type="image/png"/>
+    <link rel="icon" href="resrc/img/favicon.png" type="image/png" />
     <link rel="stylesheet" href="resrc/style/style.css" />
-    <link href="https://dav.li/fontawesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+    <link href="https://dav.li/fontawesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -22,9 +22,14 @@
         </section>
         <section id="panels">
             <div class="border">
-                <h1><a href="#panels" id="logo"><img src="resrc/img/LogoAnimeDavidLibeau.gif" alt="David Libeau Logo" draggable="false" /></a></h1>
+                <h1>
+                   <span id="logo">
+                       <a href="#panels"><img src="resrc/img/LogoAnimeDavidLibeau.gif" alt="David Libeau Logo" draggable="false" /></a>
+                       <a href="vr" target="_blank" id="vrBadge"><i class="fa fa-play" aria-hidden="true"></i> VR</a> 
+                   </span>
+                </h1>
                 <ul>
-                   <li>
+                    <li>
                         <a href="https://lab.dav.li" target="_blank" data-target="iframe">
                             <h2>Lab</h2>
                             <p>Tous les projets <i>open source</i> sur lesquels j’expérimente, réunis en un même endroit...</p>
@@ -49,17 +54,16 @@
                         <div></div>
                     </li>
                     <li>
-                        <a href="CV" target="_blank">
+                        <a href="CV" target="_blank" data-target="iframe">
                             <h2>CV</h2>
                             <p>Mon Curriculum Vitae, pour en savoir plus...</p>
                         </a>
                         <nav>
+                            <i class="fa fa-refresh fa-spin"></i>
                             <i class="fa fa-external-link-square" aria-hidden="true"></i>
                             <i class="fa fa-close" aria-hidden="true"></i>
                         </nav>
-                        <div>
-                            
-                        </div>
+                        <div></div>
                     </li>
                     <li>
                         <a href="Contact" target="_blank">
@@ -71,7 +75,23 @@
                             <i class="fa fa-close" aria-hidden="true"></i>
                         </nav>
                         <div>
-                            
+                            <p>Vous pouvez me contacter par différents moyens :</p>
+                            <h3>Via un formulaire de contact</h3>
+                            <ul class="extLinks">
+                                <li><a href="/ContactFr">En français</a></li>
+                                <li><a href="/ContactEn">In english</a></li>
+                            </ul>
+                            <h3>Via un réseau social</h3>
+                            <ul class="extLinks">
+                                <li><a href="https://mastodon.xyz/@David">Mastodon</a></li>
+                                <li><a href="https://twitter.com/DavidLibeau">Twitter</a></li>
+                                <li><a href="https://www.linkedin.com/in/davidlibeau/">Linkedin</a></li>
+                            </ul>
+                            <h3>Je suis aussi sur</h3>
+                            <ul class="extLinks">
+                                <li><a href="https://github.com/DavidLibeau">GitHub</a></li>
+                                <li><a href="https://www.instructables.com/member/DavidLibeau/">Instructables</a></li>
+                            </ul>
                         </div>
                     </li>
                     <li>
@@ -84,9 +104,10 @@
                             <i class="fa fa-close" aria-hidden="true"></i>
                         </nav>
                         <div>
-                            <p>Version 2 de DavidLibeau.fr, le site web de David Libeau (comme son nom l'indique).<br/>&lt;insérer image travaux ici&gt;<br/>Site web en construction.</p>
+                            <p>Version 2 de <strong>DavidLibeau.fr</strong>, <em>le site web de David Libeau (comme son nom l'indique)</em>.
+                                <br/><small>Vous pouvez toujours visionner <a href="/v1" target="_blank">la version 1 de ce site web</a>.</small></p>
                             <h3>Qui est David Libeau ?</h3>
-                            <p>Un gars cool, jetez un oeil à <a href="CV" target="_blank">son CV</a>, pour le connaitre...</p>
+                            <p>Un gars cool, jetez un oeil à <a href="CV" target="_blank">mon CV</a> !</p>
                             <h3>Qui a fait ce site web ?</h3>
                             <p>Comme je suis développeur web, je l'ai fait moi-même ! Plutôt logique.</p>
                             <h3>Comment l'as-tu fait ?</h3>
@@ -98,14 +119,7 @@
                 <ul id="contentframe"></ul>
             </div>
         </section>
-        <section id="goVR">
-           <div>
-                <a href="vr">
-                    <img src="resrc/img/whaoSuchVR.gif" alt="VR gif" />
-                    <h3>DavidLibeau.fr en VR</h3>
-                </a>
-           </div>
-        </section>
+        <section style="display: none"></section>
     </main>
 
 
