@@ -1,5 +1,5 @@
     <?php if(!isset($_GET["theme"]) || $_GET["theme"]==""){ 
-         header("Location: /?theme=block");
+         header("Location: ?theme=block");
     }?>
 
     <?php require "resrc/html/AllHead.html"; ?>
