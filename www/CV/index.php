@@ -35,10 +35,28 @@
             -webkit-box-shadow: 0 0 20px 0 rgba(0,0,0,0.5);
             box-shadow: 0 0 20px 0 rgba(0,0,0,0.5);
         }
+        
+        /** #homeBtn **/
+
+        #homeBtn {
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding: 10px;
+            color: white;
+        }
+        #homeBtn>a:hover{
+            text-decoration: none;
+            color: white;
+            opacity: 0.8;
+        }
     </style>
 </head>
 
 <body>
+<?php if(!isset($_GET["iframe"])){ ?>
+   <nav id="homeBtn"><a href="/#panels"><i class="fa fa-arrow-left" aria-hidden="true"></i> DavidLibeau.fr</a></nav>
+<?php } ?>
     <main>
        <h1>CV <small>de David Libeau</small></h1>
        <nav><a href="CV_DavidLibeau.pdf"><i class="fa fa-download" aria-hidden="true" style="margin-right:4px"></i>Télécharger au format PDF</a></nav>

@@ -185,7 +185,7 @@ $("#panels a:not(#logo a)").click(function (evt) {
         });
         console.log($this.attr("href") + " " + $this.data("target"));
         if ($this.data("target") == "iframe") {
-            contentframe.children("div").html("<iframe src=\"" + $this.attr("href") + "\"></iframe>");
+            contentframe.children("div").html("<iframe src=\"" + $this.attr("href") + "?iframe\"></iframe>");
             contentframe.children("iframe").on("load",function () {
                 $("#contentframe .fa-refresh").remove();
             });

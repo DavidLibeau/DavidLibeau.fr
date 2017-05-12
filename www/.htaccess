@@ -1,0 +1,2 @@
+RewriteEngine on
+RewriteRule ^([a-zA-Z0-9]+)$ /resrc/view/page.php?page=$1 [L]
