@@ -74,6 +74,11 @@ main>section{
     height: calc(100vh - 8vw);
     width: 100%;
     border: 10px solid white;
+	-webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
     /*box-shadow: #bababa -1px 1px, #bababa -2px 2px, #bababa -3px 3px, #bababa -4px 4px, #bababa -5px 5px, inset #bababa -1px 1px, inset #bababa -2px 2px, inset #bababa -3px 3px, inset #bababa -4px 4px, inset #bababa -5px 5px;*/
 }
 @media screen and (max-width: 550px) {
@@ -233,17 +238,17 @@ main>section{
     #panels {
         overflow: visible;
     }
-    #panels li {
+    #panels>div>ul>li {
         min-width: calc(50% - 30px - 3px);
         margin-bottom: 30px;
     }
-    #panels li a {
+    #panels>div>ul>li>a {
         padding-left: 3vw;
     }
-    #panels li p {
+    #panels>div>ul>li>p {
         display: none!important;
     }
-    #panels li a::before, #panels li a::after {
+    #panels>div>ul>li>a::before, #panels>div>ul>li>a::after {
         top: 30px;
         bottom: 0px;
     }
@@ -258,7 +263,7 @@ main>section{
     #logo img {
         height: 15vw;
     }
-    #panels li {
+    #panels>div>ul>li {
         min-width: 0;
         display: block;
         margin-bottom: 15px;
@@ -315,14 +320,26 @@ main>section{
     transform: none;
 }
 
-#panels #contentframe div {
+#panels #contentframe li.open {
+    position: fixed;
+    top: 4vw!important;
+    bottom: 4vw!important;
+    left: 4vw!important;
+    right: 4vw!important;
+    transition: all 0.3s cubic-bezier(0.53, 0.01, 0.36, 1.2)!important;
+	margin: 0;
+	margin-top: -30px;
+}
+
+#panels #contentframe div { /* content */
     position: absolute;
-    top: 5vw;
-    bottom: -10px;
-    right: 0;
-    left: 0;
+	top: 80px;
+	bottom: -10px;
+	left: 0;
+	right: 0;
     margin: 0;
     border-top: 5px solid rgba(0,0,0,0.05);
+	overflow: hidden;
 }
 
 #panels #contentframe iframe {

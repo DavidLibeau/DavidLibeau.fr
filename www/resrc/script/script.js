@@ -142,13 +142,14 @@ $("#panels a:not(#logo a)").click(function (evt) {
     evt.preventDefault();
     noScroll = true;
     $("main").css("overflow", "hidden");
+	$("#panels .border").css("border-color","rgba(255,255,255,0)");
 
     var contentframe = $(this).parent().clone().css({
         "position": "fixed",
         "top": $(this).offset().top,
         "bottom": ($(window).height() - ($(this).offset().top + $(this).height() + 40)),
         "left": $(this).offset().left,
-        "right": ($(window).width() - ($(this).offset().left + $(this).width() + 80)),
+        "right": ($(window).width() - ($(this).offset().left + $(this).width() + 85)),
         "-webkit-transition": "all 0.2s ease-out",
         "-moz-transition": "all 0.2s ease-out",
         "-ms-transition": "all 0.2s ease-out",
@@ -157,13 +158,7 @@ $("#panels a:not(#logo a)").click(function (evt) {
     }).prependTo("#contentframe");
 
     setTimeout(function () {
-        contentframe.css({
-            "top": 0,
-            "left": 0,
-            "right": 0,
-            "bottom": "3vw",
-            "margin": "1vw calc(4vw - 5px)"
-        }).children("a").click(function (evt) {
+        contentframe.addClass("open").children("a").click(function (evt) {
             evt.preventDefault();
         }).css({
             "cursor": "default"
@@ -173,6 +168,7 @@ $("#panels a:not(#logo a)").click(function (evt) {
         $(this).parents("li").fadeOut(100);
         noScroll = false;
         $("main").css("overflow", "");
+		$("#panels .border").css("border-color","rgba(255,255,255,1)");
     });
     $("#contentframe nav .fa-external-link-square").click(function () {
         window.open($(this).parents("li").children("a").attr("href"));
