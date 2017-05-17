@@ -47,7 +47,7 @@ main {
     overflow-x: scroll;
     overflow-y: hidden;
     white-space: nowrap;
-    
+	
     background: #0070c0;
     background: -moz-linear-gradient(top,  #0070c0 1%, #77eae8 44%, #fff4d3 67%, #fca800 100%);
     background: -webkit-linear-gradient(top,  #0070c0 1%,#77eae8 44%,#fff4d3 67%,#fca800 100%);
@@ -124,9 +124,9 @@ main>section{
     overflow-x: auto;
 }
 
-#panels>div>ul>h1 {
+#panels>div>h1 {
     margin: 0;
-    margin-bottom: 2vw;
+    margin-bottom: 7vh;
 }
 #logo {
     position: relative;
@@ -136,7 +136,7 @@ main>section{
     box-shadow: #bababa -1px 1px, #bababa -2px 2px, #bababa -3px 3px, #bababa -4px 4px, #bababa -5px 5px;
 }
 #logo img {
-    height: 5vw;
+    height: 10vh;
     opacity: 0;
 }
 #vrBadge {
@@ -229,7 +229,7 @@ main>section{
 }
 
 @media screen and (max-width: 1000px) {
-    #logo {
+    #panels>div>h1 {
         margin-bottom: 20px;
     }
     #logo img {
@@ -245,7 +245,7 @@ main>section{
     #panels>div>ul>li>a {
         padding-left: 3vw;
     }
-    #panels>div>ul>li>p {
+    #panels>div>ul>li>a>p {
         display: none!important;
     }
     #panels>div>ul>li>a::before, #panels>div>ul>li>a::after {
@@ -299,7 +299,7 @@ main>section{
 }
 #panels #contentframe nav {
     position: absolute;
-    top: 2vw;
+    top: 35px;
     right: 10px;
     margin: 0;
     transform: none;
