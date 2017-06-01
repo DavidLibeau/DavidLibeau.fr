@@ -1,2 +1,6 @@
-RewriteEngine on
+RewriteEngine On
+
 RewriteRule ^([a-zA-Z0-9]+)$ /resrc/view/page.php?page=$1 [L]
+
+RewriteCond %{HTTPS} off
+RewriteRule (.*) https://%{SERVER_NAME}/$1 [R,L]
