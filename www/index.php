@@ -76,23 +76,7 @@
                             <i class="fa fa-close" aria-hidden="true"></i>
                         </nav>
                         <div>
-                            <p>Vous pouvez me contacter par différents moyens :</p>
-                            <h3>Via un formulaire de contact</h3>
-                            <ul class="extLinks">
-                                <li><a href="/Bonjour">En français</a></li>
-                                <li><a href="/Hello">In english</a></li>
-                            </ul>
-                            <h3>Via un réseau social</h3>
-                            <ul class="extLinks">
-                                <li><a href="https://mastodon.xyz/@David">Mastodon</a></li>
-                                <li><a href="https://twitter.com/DavidLibeau">Twitter</a></li>
-                                <li><a href="https://www.linkedin.com/in/davidlibeau/">Linkedin</a></li>
-                            </ul>
-                            <h3>Je suis aussi sur</h3>
-                            <ul class="extLinks">
-                                <li><a href="https://github.com/DavidLibeau">GitHub</a></li>
-                                <li><a href="https://www.instructables.com/member/DavidLibeau/">Instructables</a></li>
-                            </ul>
+                            <?php require("page/Contact-body.php"); ?>
                         </div>
                     </li>
                     <li>
@@ -105,15 +89,7 @@
                             <i class="fa fa-close" aria-hidden="true"></i>
                         </nav>
                         <div>
-                            <p>Version 2 de <strong>DavidLibeau.fr</strong>, <em>le site web de David Libeau (comme son nom l'indique)</em>.
-                                <br/><small>Vous pouvez toujours visionner <a href="/v1" target="_blank">la version 1 de ce site web</a>.</small></p>
-                            <h3>Qui est David Libeau ?</h3>
-                            <p>Un gars cool, jetez un oeil à <a href="CV" target="_blank">mon CV</a> !</p>
-                            <h3>Qui a fait ce site web ?</h3>
-                            <p>Comme je suis développeur web, je l'ai fait moi-même ! Plutôt logique.</p>
-                            <h3>Comment l'as-tu fait ?</h3>
-                            <p>Vous pouvez remonter à la source du site web <a href="https://github.com/DavidLibeau/DavidLibeau.fr" target="_blank">sur GitHub</a>, et ainsi tout voir et tout comprendre !</p>
-                            <p>:)</p>
+                            <?php require("page/About-body.php"); ?>
                         </div>
                     </li>
                 </ul>
